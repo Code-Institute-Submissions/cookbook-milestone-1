@@ -1,16 +1,14 @@
+/* DESKTOP */
+
+
+/* GENERIC STYLE RULES */
 body {
     margin: 0;
-    padding: 1% 15%;
+    padding: 1% 12%;
     min-height:100vh;
     display: flex;
     flex-direction: column;
     background-image: url("/static/images/bg.jpg");
-}
-
-
-main {
-    padding: 0px;
-    background-color: rgb(250, 250, 250);
 }
 
 
@@ -24,6 +22,15 @@ p {
 }
 
 
+main {
+    padding: 0px;
+    background-color: rgb(250, 250, 250);
+}
+
+
+
+
+/* INDEX MAIN PICTURE STYLE */
 .main-pic {
     padding: 300px 0;
     position: static;
@@ -56,4 +63,61 @@ p {
     border: 1px solid rgb(236, 182, 64);
     padding: 10px;
     width: 80px;
+}
+
+
+
+
+/* MAIN SECTION AFTER MAIN PICTURE STYLE */
+#index-container {
+    margin: 5vh 6vw;
+ /* border: 2px solid red; */
+    display: flex;
+}
+
+
+#index-left-cell {
+    width: 60%;
+    /* border: 2px solid blue; */
+
+}
+
+
+#index-right-cell {
+    width: 35%;
+    padding-left: 40px;
+    /*
+    border-style: none none none solid;
+    border-width: thin;
+    border-color: rgb(236, 182, 64);
+    */
+}
+
+
+.index-small-recipes-container {
+    display: flex;
+    justify-content: space-between;
+    border-style: none none solid none;
+    border-width: thin;
+    border-color: rgb(236, 182, 64);
+}
+
+
+.index-small-recipes-container p {
+    width: 335px;
+}
+
+
+.index-small-recipes-container img {
+    width: 335px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.index-large-recipes-container img {
+    padding-top: 20px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }

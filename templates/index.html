@@ -1,47 +1,64 @@
 {% extends 'base.html' %}
 {% block content %}
 
-  <main>
+<main>
 
-    <article>
-      <header class="main-pic">
-        <!-- <img id="pic-intro" src="/static/images/food.jpg" alt="Food" /> -->
-          <div id="pic-square">
-            <h1>Spring Vegetable Cous Cous</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat id aperiam fuga blanditiis natus. Mollitia pariatur, alias magni tempora eius assumenda iste quia dicta velit dolor, ab tenetur, vitae voluptatem?</p>
-            
-            <p class="gold-text">Read More</p>
-          </div>
+  <article>
+    <header class="main-pic">
+      <!-- <img id="pic-intro" src="/static/images/food.jpg" alt="Food" /> -->
+      <div id="pic-square">
+        <h1>Spring Vegetable Cous Cous</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat id aperiam fuga blanditiis natus. Mollitia
+          pariatur, alias magni tempora eius assumenda iste quia dicta velit dolor, ab tenetur, vitae voluptatem?</p>
 
-        <!-- <h2>Article heading - HOME</h2> -->
-      </header>
-      <section>
-        <h3> Section heading</h3>
-        <p>Stuff in here</p>
-      </section>
+        <p class="gold-text">Read More</p>
+      </div>
+  </article>
 
-      <section>
-        <h3> Section heading</h3>
-        <p>Other stuff in here</p>
-      </section>
+  <section id="index-container">
 
-    </article>
+    <section id="index-left-cell">
 
-    <aside>
-      <section>
-        <h4> Section heading</h4>
-        <p>Aside stuff in here</p>
-      </section>
+      <div class="index-small-recipes-container">
+        <article>
+          <img class="resizeimg" src="/static/images/masala.jpg" alt="Masala" />
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, beatae quam? Perferendis reprehenderit
+            magni ducimus officia asperiores iste quidem, aliquid assumenda fuga provident rerum illo accusantium,
+            eveniet sint excepturi rem.</p>
+        </article>
 
-      <section>
-        <h4> Section heading</h4>
-        <p>More aside stuff in here</p>
+        <aside>
+          <img src="/static/images/chickencurry.jpg" alt="Chicken" />
+          <p>Cook our healthy chicken Madras curry and ditch the takeaway menu. This simple family dinner is full of fragrant spices and tender pieces of chicken</p>
+        </aside>
+      </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo aperiam molestias doloremque quidem placeat at, quam dolor, delectus praesentium rerum mollitia officiis quisquam. Facere illum dicta dolorum minus culpa!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo aperiam molestias doloremque quidem placeat at, quam dolor, delectus praesentium rerum mollitia officiis quisquam. Facere illum dicta dolorum minus culpa!</p>
+      <div class="index-large-recipes-container">
+        <article>
+          <img src="/static/images/quiche.png" alt="Quiche" />
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, beatae quam? Perferendis reprehenderit
+            magni ducimus officia asperiores iste quidem, aliquid assumenda fuga provident rerum illo accusantium,
+            eveniet sint excepturi rem.</p>
+        </article>
+      </div>
+
+    </section>
+
+    <section id="index-right-cell">
+      <h4> Section heading</h4>
+      <p>More aside stuff in here</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo aperiam molestias doloremque quidem
+        placeat at, quam dolor, delectus praesentium rerum mollitia officiis quisquam. Facere illum dicta dolorum minus
+        culpa!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo aperiam molestias doloremque quidem
+        placeat at, quam dolor, delectus praesentium rerum mollitia officiis quisquam. Facere illum dicta dolorum minus
+        culpa!</p>
         
-      </section>
-    </aside>
-  </main>
 
-  {% endblock %}
+    </section>
+
+  </section>
+</main>
+
+{% endblock %}
