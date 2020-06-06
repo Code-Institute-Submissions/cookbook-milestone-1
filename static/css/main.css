@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 1% 15%;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/static/images/bg.jpg");
+}
+
+
+main {
+    padding: 0px;
+    background-color: rgb(250, 250, 250);
+}
+
+
+h6, h5, h4, h3, h2, h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+p {
+    font-family: 'Cabin', sans-serif;
+}
+
+
+.main-pic {
+    padding: 300px 0;
+    position: static;
+    background-image: url('/static/images/food.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;  
+    background-color: #010506;
+    width: 100%;
+    height: auto;
+    text-align: center;  
+}
+
+
+#pic-square {
+    margin: auto;
+    color: #e9e9e9;
+    padding: 20px;
+    width: 30vw;
+    height: auto;
+    background: #010506;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+
+.gold-text {
+    margin: auto;
+    color: rgb(236, 182, 64);
+    border: 1px solid rgb(236, 182, 64);
+    padding: 10px;
+    width: 80px;
+}

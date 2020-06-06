@@ -1,0 +1,41 @@
+footer {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #010506;
+}
+
+
+footer p {
+    color: white;
+    font-size: 14px;
+}
+
+#footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    padding: 2px;
+}
+
+
+.footer-div-cell {
+    margin: 0 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* CELL 1 */
+.small-logo img {
+    width: 180px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+.social-icons img {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+}

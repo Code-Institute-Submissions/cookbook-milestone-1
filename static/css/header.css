@@ -1,0 +1,58 @@
+#header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #010506;
+}
+
+
+/* Logo */
+#header-logo {
+    width: 222px;
+    height: 49px;
+}
+
+
+nav ul {
+    overflow: hidden;
+    list-style-type: none;
+}
+
+
+nav li {
+    display: inline;
+}
+
+
+nav li a {
+    padding: 30px;
+    font-family: 'Cabin', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #F0641E;
+  }
+
+
+#user-icon {
+    height: 40px;
+    width: auto;
+}
+
+
+#username-div {
+    width: 70px;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#username-div a {
+    font-family: 'Cabin', sans-serif;
+    color: #F0641E;
+    text-decoration: underline;
+    margin-top: 0;
+}
+

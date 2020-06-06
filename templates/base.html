@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=Source+Sans+Pro:wght@600&display=swap">
+  <title>Cookbook</title>
+</head>
+
+<body>
+
+  <header id="header">
+    <img src="/static/images/cookbook.png" id="header-logo" alt="Cookbook" />
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
+        <li><a href="{{ url_for('lunch') }}">Lunch</a></li>
+        <li><a href="{{ url_for('dinner') }}">Dinner</a></li>
+        <li><a href="{{ url_for('dessert') }}">Dessert</a></li>
+        <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="username-div">
+      <img src="/static/images/user.png" id="user-icon" alt="UserMenu" />
+      <a href="{{ url_for('profile') }}">Renato</a>
+    </div>
+  </header>
+
+  {% block content %}
+  {% endblock %}
+
+  <footer>
+    <div id="footer-container">
+
+      <div class="footer-div-cell">
+        <div class="small-logo">
+          <img src="/static/images/cookbook.png" alt="Logo">
+          <div class="social-icons">
+            <img src="/static/images/facebook.png" alt="Facebook">
+            <img src="/static/images/instagram.png" alt="Instagram">
+            <img src="/static/images/pinterest.png" alt="Pinterest">
+            <img src="/static/images/twitter.png" alt="Twitter">
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-div-cell">
+        <p>Cookbook is my personal blog</p>
+        <p>Renato Bianco © Milestone 3 - 2020</p>
+        <p>Code Institute</p>      
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
