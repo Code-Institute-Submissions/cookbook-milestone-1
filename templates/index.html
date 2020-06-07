@@ -21,7 +21,7 @@
 
       <div class="index-small-recipes-container">
         <article>
-          <img class="resizeimg" src="/static/images/masala.jpg" alt="Masala" />
+          <img src="/static/images/masala.jpg" alt="Masala" />
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, beatae quam? Perferendis reprehenderit
             magni ducimus officia asperiores iste quidem, aliquid assumenda fuga provident rerum illo accusantium,
             eveniet sint excepturi rem.</p>
@@ -29,7 +29,8 @@
 
         <aside>
           <img src="/static/images/chickencurry.jpg" alt="Chicken" />
-          <p>Cook our healthy chicken Madras curry and ditch the takeaway menu. This simple family dinner is full of fragrant spices and tender pieces of chicken</p>
+          <p>Cook our healthy chicken Madras curry and ditch the takeaway menu. This simple family dinner is full of
+            fragrant spices and tender pieces of chicken</p>
         </aside>
       </div>
 
@@ -45,17 +46,87 @@
     </section>
 
     <section id="index-right-cell">
-      <h4> Section heading</h4>
-      <p>More aside stuff in here</p>
+      <div id="right-container">
+        <h1>Check my best recipies here</h1>
+        <hr />
+        <form id="search-form" action="/search" method="get">
+          <input id="search-box" name="bar" type="text" placeholder="Search for recipes or ingredients!" />
+          <input id="search-btn" value="" type="submit" />
+        </form>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo aperiam molestias doloremque quidem
-        placeat at, quam dolor, delectus praesentium rerum mollitia officiis quisquam. Facere illum dicta dolorum minus
-        culpa!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo aperiam molestias doloremque quidem
-        placeat at, quam dolor, delectus praesentium rerum mollitia officiis quisquam. Facere illum dicta dolorum minus
-        culpa!</p>
-        
+        <h1>My latest recipes:</h1>
+        <hr />
+        <div id="latest-recipes">
+          <div id="small-pic-recipe">
+            <img src="/static/images/chickencurry.jpg" alt="latest">
+          </div>
+          <div>
+            <p><small>June 07, 2020</small></p>
+            <p>Chicken Madras Curry</p>
+          </div>
+        </div>
+        <hr />
+        <div id="latest-recipes">
+          <div id="small-pic-recipe">
+            <img src="/static/images/food.jpg" alt="latest">
+          </div>
+          <div>
+            <p><small>June 07, 2020</small></p>
+            <p>Instant Pot Butter Chicken</p>
+          </div>
+        </div>
+        <hr />
+        <div id="latest-recipes">
+          <div id="small-pic-recipe">
+            <img src="/static/images/masala.jpg" alt="latest">
+          </div>
+          <div>
+            <p><small>June 07, 2020</small></p>
+            <p>Homemade Naan</p>
+          </div>
+        </div>
+        <hr />
+        <div id="latest-recipes">
+          <div id="small-pic-recipe">
+            <img src="/static/images/quiche.png" alt="latest">
+          </div>
+          <div>
+            <p><small>June 07, 2020</small></p>
+            <p>Cauliflower Fried Rice</p>
+          </div>
+        </div>
+        <hr />
+        <div id="latest-recipes">
+          <div id="small-pic-recipe">
+            <img src="/static/images/chickencurry.jpg" alt="latest">
+          </div>
+          <div>
+            <p><small>June 07, 2020</small></p>
+            <p>Cauliflower, Potato, and Pea Curry</p>
+          </div>
+        </div>
+        <hr />
+        <div id="latest-recipes">
+          <div id="small-pic-recipe">
+            <img src="/static/images/food.jpg" alt="latest">
+          </div>
+          <div>
+            <p><small>June 07, 2020</small></p>
+            <p>Spiced Chickpea Flatbread</p>
+          </div>
+        </div>
+        <hr />
 
+        <h4> Section heading</h4>
+        <p>Creamy Cashew Butter Paneer</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo aperiam molestias doloremque
+          quidem
+          placeat at, quam dolor, delectus praesentium rerum mollitia officiis quisquam. Facere illum dicta dolorum
+          minus
+          culpa!</p>
+
+      </div>
     </section>
 
   </section>
