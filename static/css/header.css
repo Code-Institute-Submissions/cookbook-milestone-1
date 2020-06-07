@@ -31,9 +31,10 @@ nav li a {
     text-decoration: none;
 }
 
+
 nav li a:hover {
     color: #F0641E;
-  }
+}
 
 
 #user-icon {
