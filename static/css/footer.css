@@ -1,13 +1,14 @@
+/* CSS - FOOTER - MOBILE FIRST */
+
 footer {
-    margin-top: auto;
+    margin-top: 10%;
     padding: 10px;
     background-color: #010506;
 }
 
-
 footer p {
     color: white;
-    font-size: 14px;
+    font-size: 8px;
 }
 
 #footer-container {
@@ -17,24 +18,27 @@ footer p {
     padding: 2px;
 }
 
-
 .footer-div-cell {
     margin: 0 15px;
     padding: 10px;
     text-align: center;
 }
 
-
-/* CELL 1 */
 .small-logo img {
-    width: 180px;
+    width: 120px;
     height: auto;
     margin-right: 10px;
 }
 
-
 .social-icons img {
     margin: 5px;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
+}
+
+
+@media (min-width: 768px) {
+    footer p {
+        font-size: 12px;
+    }
 }

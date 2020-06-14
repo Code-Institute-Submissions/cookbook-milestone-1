@@ -5,7 +5,7 @@
 
   <article>
     <header class="main-pic">
-      <!-- <img id="pic-intro" src="/static/images/food.jpg" alt="Food" /> -->
+
       <div id="pic-square">
         <h1>Spring Vegetable Cous Cous</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat id aperiam fuga blanditiis natus. Mollitia
@@ -13,29 +13,51 @@
 
         <p class="gold-text">Read More</p>
       </div>
+
+    </header>
   </article>
 
-  <section id="index-container">
 
-    <section id="index-left-cell">
+  <section id="index-container"> <!-- SECTION INDEX CONTAINER START -->
 
-      <div class="index-small-recipes-container">
+    <div id="index-left"> <!-- START OF INDEX LEFT DIV -->
+
+      <div id="searchbar-576px">
+        <h1>Find a recipe</h1>
+        <form id="search-form" action="/search" method="get">
+          <input id="search-box" name="bar" type="text" placeholder="Search for recipes or ingredients!" />
+          <input id="search-btn" value="" type="submit" />
+        </form>
+      </div>
+
+
+      <!-- WEEKLY RECIPES SECTION -->
+      <h1>Weekly recipes</h1>
+      <div id="weekly-768px">
+
         <article>
+          <p class="recipe-name">Masala chicken curry hot</p>
           <img src="/static/images/masala.jpg" alt="Masala" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, beatae quam? Perferendis reprehenderit
+          <p class="weekly-p-768px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, beatae quam? Perferendis
+            reprehenderit
             magni ducimus officia asperiores iste quidem, aliquid assumenda fuga provident rerum illo accusantium,
             eveniet sint excepturi rem.</p>
         </article>
-
-        <aside>
+        <article>
+          <p class="recipe-name">Masala chicken curry hot</p>
           <img src="/static/images/chickencurry.jpg" alt="Chicken" />
-          <p>Cook our healthy chicken Madras curry and ditch the takeaway menu. This simple family dinner is full of
-            fragrant spices and tender pieces of chicken</p>
-        </aside>
+          <p class="weekly-p-768px">Cook our healthy chicken Madras curry and ditch the takeaway menu. This simple family
+            dinner is full of fragrant spices and tender pieces of chicken</p>
+        </article>
       </div>
 
-      <div class="index-large-recipes-container">
+
+      <!-- MOST RATED SECTION -->
+      <h1>Most rated today</h1>
+      <div id="most-rated">
+
         <article>
+          <p class="recipe-name">Vegetarian Quiche</p>
           <img src="/static/images/quiche.png" alt="Quiche" />
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, beatae quam? Perferendis reprehenderit
             magni ducimus officia asperiores iste quidem, aliquid assumenda fuga provident rerum illo accusantium,
@@ -43,93 +65,155 @@
         </article>
       </div>
 
-    </section>
 
-    <section id="index-right-cell">
-      <div id="right-container">
-        <h1>Check my best recipies here</h1>
-        <hr />
+      <!-- LATEST RECIPES SECTION -->
+      <h1>Latest Recipes</h1>
+      <div class="latest-recipes">
+        <article>
+          <p class="recipe-name">Instant Pot Butter Chicken</p>
+          <p><small>June 07, 2020</small></p>
+          <img src="/static/images/food.jpg" alt="latest">
+        </article>
+
+        <article>
+          <p class="recipe-name">Homemade Naan</p>
+          <p><small>June 07, 2020</small></p>
+          <img src="/static/images/masala.jpg" alt="latest">
+        </article>
+      </div>
+
+      <div class="latest-recipes">
+        <article>
+          <p class="recipe-name">Cauliflower Fried Rice</p>
+          <p><small>June 07, 2020</small></p>
+          <img src="/static/images/quiche.png" alt="latest">
+        </article>
+
+        <article>
+          <p class="recipe-name">Cauliflower, Potato, and Pea Curry</p>
+          <p><small>June 07, 2020</small></p>
+          <img src="/static/images/chickencurry.jpg" alt="latest">
+        </article>
+      </div>
+
+      <div class="latest-recipes">
+        <article>
+          <p class="recipe-name">Spiced Chickpea Flatbread</p>
+          <p><small>June 07, 2020</small></p>
+          <img src="/static/images/food.jpg" alt="latest">
+        </article>
+        <article>
+          <p class="recipe-name">Chicken Madras Curry</p>
+          <p><small>June 07, 2020</small></p>
+          <img src="/static/images/chickencurry.jpg" alt="latest">
+        </article>
+      </div>
+
+    </div> <!-- END INDEX LEFT DIV -->
+
+
+    <div id="index-right"> <!-- START OF INDEX RIGHT DIV -->
+
+      <!-- SEARCH BAR - STARTS AT BREAKPOINT 1200PX -->
+      <div id="searchbar-sociallinks-1200px">
+        <h1>Find a recipe</h1>
         <form id="search-form" action="/search" method="get">
           <input id="search-box" name="bar" type="text" placeholder="Search for recipes or ingredients!" />
           <input id="search-btn" value="" type="submit" />
         </form>
 
-        <h1>My latest recipes:</h1>
-        <hr />
-        <div id="latest-recipes">
-          <div id="small-pic-recipe">
-            <img src="/static/images/chickencurry.jpg" alt="latest">
-          </div>
-          <div>
-            <p><small>June 07, 2020</small></p>
-            <p>Chicken Madras Curry</p>
-          </div>
+        <!-- FOLLOW US LINKS - START AT BREAKPOINT 1200PX -->
+        <div class="follow-us">
+          <h1>Social Links</h1>
+          <img src="/static/images/facebook.png" alt="Facebook" />
+          <img src="/static/images/instagram.png" alt="Instagram" />
+          <img src="/static/images/pinterest.png" alt="Pinterest" />
+          <img src="/static/images/twitter.png" alt="Twitter" />
         </div>
-        <hr />
-        <div id="latest-recipes">
-          <div id="small-pic-recipe">
-            <img src="/static/images/food.jpg" alt="latest">
-          </div>
-          <div>
-            <p><small>June 07, 2020</small></p>
-            <p>Instant Pot Butter Chicken</p>
-          </div>
-        </div>
-        <hr />
-        <div id="latest-recipes">
-          <div id="small-pic-recipe">
-            <img src="/static/images/masala.jpg" alt="latest">
-          </div>
-          <div>
-            <p><small>June 07, 2020</small></p>
-            <p>Homemade Naan</p>
-          </div>
-        </div>
-        <hr />
-        <div id="latest-recipes">
-          <div id="small-pic-recipe">
-            <img src="/static/images/quiche.png" alt="latest">
-          </div>
-          <div>
-            <p><small>June 07, 2020</small></p>
-            <p>Cauliflower Fried Rice</p>
-          </div>
-        </div>
-        <hr />
-        <div id="latest-recipes">
-          <div id="small-pic-recipe">
-            <img src="/static/images/chickencurry.jpg" alt="latest">
-          </div>
-          <div>
-            <p><small>June 07, 2020</small></p>
-            <p>Cauliflower, Potato, and Pea Curry</p>
-          </div>
-        </div>
-        <hr />
-        <div id="latest-recipes">
-          <div id="small-pic-recipe">
-            <img src="/static/images/food.jpg" alt="latest">
-          </div>
-          <div>
-            <p><small>June 07, 2020</small></p>
-            <p>Spiced Chickpea Flatbread</p>
-          </div>
-        </div>
-        <hr />
-
-        <h4> Section heading</h4>
-        <p>Creamy Cashew Butter Paneer</p>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo aperiam molestias doloremque
-          quidem
-          placeat at, quam dolor, delectus praesentium rerum mollitia officiis quisquam. Facere illum dicta dolorum
-          minus
-          culpa!</p>
-
       </div>
-    </section>
 
-  </section>
+
+      <!-- UPCOMING STREAMING SECTION -->
+      <h1>Upcoming Streaming</h1>
+      <article>
+        <br />
+        <div class="streaming-icon">
+          <img src="/static/images/streaming.png" alt="streaming" />
+          <p class="event-name">How to make bread</p>
+        </div>
+        <p><small>July 07, 2020</small></p>
+        <p>Introducing to the art of breadmaking with this fun and easy starter recipe. Watch to find out the best way
+          of making perfect bread.</p>
+      </article>
+      <hr />
+      <article>
+        <div class="streaming-icon">
+          <img src="/static/images/streaming.png" alt="streaming" />
+          <p class="event-name">Choosing the right tools</p>
+        </div>
+        <p><small>July 14, 2020</small></p>
+        <p>The quality of the cooking equipment that you choose to use is as outstanding as the tools themselves when it
+          comes to work and food quality.</p>
+      </article>
+      <hr />
+      <article>
+        <div class="streaming-icon">
+          <img src="/static/images/streaming.png" alt="streaming" />
+          <p class="event-name">Rules to follow</p>
+        </div>
+        <p><small>July 29, 2020</small></p>
+        <p>Basic Rules of Kitchen Safety. Store knives in a wooden block or in a drawer. Never cook in loose clothes and
+          keep long hair tied back. Watch to find out more.</p>
+      </article>
+      <hr />
+      <article>
+        <div class="streaming-icon">
+          <img src="/static/images/streaming.png" alt="streaming" />
+          <p class="event-name">When it's overcooked</p>
+        </div>
+        <p><small>August 09, 2020</small></p>
+        <p>Overcooking makes the food hard to digest. Let's find out when food is really overcooked in this live
+          streaming video.</p>
+      </article>
+      <hr />
+      <article>
+        <div class="streaming-icon">
+          <img src="/static/images/streaming.png" alt="streaming" />
+          <p class="event-name">Making pasta</p>
+        </div>
+        <p><small>August 19, 2020</small></p>
+        <p>A homemade pasta dough recipe from Cookbook that shows you how to make fresh pasta. It couldn't be easier!
+        </p>
+      </article>
+      <hr />
+      <article>
+        <div class="streaming-icon">
+          <img src="/static/images/streaming.png" alt="streaming" />
+          <p class="event-name">Food photography</p>
+        </div>
+        <p><small>August 28, 2020</small></p>
+        <p>Food Photography is about telling stories with delicious compositions that will bring your audience to the
+          table.</p>
+      </article>
+
+
+      <!-- ABOUT COOKBOOK SECTION -->
+      <h1>About Cookbook</h1>
+      <div id="about">
+        <p>Hello! My name is Renato, and I’m a Code Institute student. This is my third Milestone, and in this project
+          I’m going to use HTML, CSS3, a bit of Javascript, Python with Flask, and Database.</p>
+        <p>I chose to build a very small blog for my third Milestone, where I can show that I’m able to use Python+Flask
+          and Database. I also love cooking by the way, then this will make my job a bit more pleasant. I would have
+          liked to make the blog a bit more dynamic, and create a small community with user access, but hopefully I will
+          be able to do it with my next and last Milestone where I can use also Django! That’s amazing isn’t it?</p>
+        <p>I hope you like this small project, ciao!</p>
+      </div>
+
+    </div> <!-- END INDEX RIGHT DIV -->
+
+
+  </section> <!-- SECTION INDEX CONTAINER END -->
+
 </main>
 
 {% endblock %}

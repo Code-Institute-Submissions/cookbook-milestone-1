@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=Source+Sans+Pro:wght@600&display=swap">
-  <title>Cookbook</title>
+  <title>Media Cookbook</title>
 </head>
 
 <body>
 
+  <!-- HEADER START -->
   <header id="header">
     <img src="/static/images/cookbook.png" id="header-logo" alt="Cookbook" />
     <nav>
@@ -31,11 +32,52 @@
       <img src="/static/images/user.png" id="user-icon" alt="UserMenu" />
       <a href="{{ url_for('profile') }}">Renato</a>
     </div>
+
+
+
+
+    <!-- BURGER MENU START -->
+    <div id="myLinks">
+      <a href="{{ url_for('profile') }}">Profile</a>
+      <p></p>
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('breakfast') }}">Breakfast</a>
+      <a href="{{ url_for('lunch') }}">Lunch</a>
+      <a href="{{ url_for('dinner') }}">Dinner</a>
+      <a href="{{ url_for('dessert') }}">Dessert</a>
+      <a href="{{ url_for('drinks') }}">Drinks</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+      <span class="burger">
+        <hr>
+        <hr>
+        <hr>
+      </span>
+    </a>
+
+
+    <script>
+      function burgerMenu() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+    <!-- BURGER MENU END -->
+
   </header>
+  <!-- HEADER END -->
 
   {% block content %}
   {% endblock %}
 
+
+
+  <!-- FOOTER START -->
   <footer>
     <div id="footer-container">
 
@@ -53,12 +95,12 @@
 
       <div class="footer-div-cell">
         <p>Cookbook is my personal blog</p>
-        <p>Renato Bianco © Milestone 3 - 2020</p>
-        <p>Code Institute</p>      
+        <p>Renato Bianco © Milestone 3</p>
+        <p>Code Institute Student</p>
       </div>
     </div>
   </footer>
-
+  <!-- FOOTER END -->
 
 </body>
 

@@ -1,3 +1,5 @@
+/* CSS - HEADER - MOBILE FIRST */
+
 #header {
     padding: 30px;
     display: flex;
@@ -5,55 +7,141 @@
     background-color: #010506;
 }
 
-
 /* Logo */
 #header-logo {
     width: 222px;
     height: 49px;
 }
 
+#header nav {
+    display: none;
+}
 
 nav ul {
     overflow: hidden;
     list-style-type: none;
 }
 
-
 nav li {
     display: inline;
 }
 
-
 nav li a {
-    padding: 30px;
+    padding: 20px 15px;
     font-family: 'Cabin', sans-serif;
+    font-size: 15px;
     color: white;
     text-decoration: none;
 }
-
 
 nav li a:hover {
     color: #F0641E;
 }
 
-
-#user-icon {
-    height: 40px;
-    width: auto;
-}
-
-
 #username-div {
+    display: none;
     width: 70px;
     flex-direction: column;
     text-align: center;
 }
 
-
 #username-div a {
     font-family: 'Cabin', sans-serif;
+    font-size: 15px;
     color: #F0641E;
     text-decoration: underline;
     margin-top: 0;
 }
 
+#user-icon {
+    margin: auto;
+    height: auto;
+    width: 20px;
+}
+
+
+/* Burger Menu On - START */
+.burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    margin: 10px;
+}
+
+.burger hr {
+    border: 1.3px solid #ffffff;
+}
+
+#myLinks {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #010506;
+    border: 3px solid #F0641E;
+    text-align: center;
+}
+
+#myLinks a:link {
+    font-family: 'Cabin', sans-serif;
+    border: 1px solid rgb(36, 30, 27);
+    width: 100%;
+    margin: 0;
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+}
+
+#myLinks a:hover {
+    color: #F0641E;
+}
+
+#myLinks a:visited {
+    color: white;
+    border: 1px solid rgb(36, 30, 27);
+}
+
+#myLinks hr {
+    border: 1px solid #ffffff;
+    width: 30px;
+}
+
+#myLinks p {
+    padding: 2%;
+}
+/* Burger Menu - END */
+
+
+
+@media (min-width: 992px) {
+    .burger {
+        display: none;
+    }
+    #header nav {
+        display: flex;
+    }
+    #username-div {
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    nav li a {
+        padding: 20px 20px;
+        font-size: 16px;
+    }
+    #username-div a {
+        font-size: 16px;
+    }
+    #user-icon {
+        width: 30px;
+    }
+}
