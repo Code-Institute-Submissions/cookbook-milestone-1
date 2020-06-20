@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
@@ -20,11 +21,11 @@
     <nav>
       <ul>
         <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
-        <li><a href="{{ url_for('lunch') }}">Lunch</a></li>
-        <li><a href="{{ url_for('dinner') }}">Dinner</a></li>
+        <li><a href="{{ url_for('pasta') }}">Pasta</a></li>
+        <li><a href="{{ url_for('meatandfish') }}">Meat&Fish</a></li>
+        <li><a href="{{ url_for('vegetarian') }}">Vegetarian</a></li>
         <li><a href="{{ url_for('dessert') }}">Dessert</a></li>
-        <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
+        <li><a href="{{ url_for('baking') }}">Baking</a></li>
         <li><a href="{{ url_for('contact') }}">Contact</a></li>
       </ul>
     </nav>
@@ -41,11 +42,11 @@
       <a href="{{ url_for('profile') }}">Profile</a>
       <p></p>
       <a href="{{ url_for('index') }}">Home</a>
-      <a href="{{ url_for('breakfast') }}">Breakfast</a>
-      <a href="{{ url_for('lunch') }}">Lunch</a>
-      <a href="{{ url_for('dinner') }}">Dinner</a>
+      <a href="{{ url_for('pasta') }}">Pasta</a>
+      <a href="{{ url_for('meatandfish') }}">Meat&Fish</a>
+      <a href="{{ url_for('vegetarian') }}">Vegetarian</a>
       <a href="{{ url_for('dessert') }}">Dessert</a>
-      <a href="{{ url_for('drinks') }}">Drinks</a>
+      <a href="{{ url_for('baking') }}">Baking</a>
       <a href="{{ url_for('contact') }}">Contact</a>
     </div>
     <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">

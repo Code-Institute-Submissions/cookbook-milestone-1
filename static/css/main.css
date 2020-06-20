@@ -1,40 +1,42 @@
 /* CSS - MAIN - MOBILE FIRST */
 
-
 body {
     margin: auto;
-    min-height:100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-image: url("/static/images/bg.jpg");
 }
 
+.bg-color-white {
+    background-color: white;
+}
 
 h6, h5, h4, h3, h2, h1 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 p {
     font-family: 'Didact Gothic', sans-serif;
 }
 
-
 /* INDEX: MAIN PIC AT THE TOP ON THE INDEX */
+
 .main-pic {
     padding: 180px 0;
     background-image: url('/static/images/food.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;  
+    background-position: center center;
     background-color: #010506;
     width: 100%;
     height: auto;
-    text-align: center;  
+    text-align: center;
     margin-bottom: 70px;
 }
 
 /* INDEX: FRAME IN THE MIDDLE OF MAIN PIC */
+
 #pic-square {
     display: none;
     margin: auto;
@@ -53,6 +55,7 @@ p {
 }
 
 /* INDEX: BUTTON INSIDE THE FRAME IN MANI PIC */
+
 .gold-text {
     margin: auto;
     color: rgb(236, 182, 64);
@@ -61,8 +64,8 @@ p {
     width: 80px;
 }
 
-
 /* INDEX MAIN CONTAINER - <section> */
+
 #index-container {
     width: auto;
     margin: 20px;
@@ -81,21 +84,24 @@ p {
     font-weight: bold;
 }
 
-/* INDEX: WEEKLY RECIPES IMAGES STYLE */ 
+/* INDEX: WEEKLY RECIPES IMAGES STYLE */
+
 #weekly-768px img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-/* INDEX: MOST RATED RECIPES IMAGES STYLE */ 
+/* INDEX: MOST RATED RECIPES IMAGES STYLE */
+
 #most-rated img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-/* INDEX: LATEST RECIPES IMAGES STYLE */ 
+/* INDEX: LATEST RECIPES IMAGES STYLE */
+
 .latest-recipes img {
     width: 100%;
     height: 250px;
@@ -110,12 +116,14 @@ p {
     margin-top: 50px;
 }
 
-/* INDEX: SEARCH BAR AVAILABLE AT THE TOP WHEN BREAKPOINT IS UNDER 1200 */ 
+/* INDEX: SEARCH BAR AVAILABLE AT THE TOP WHEN BREAKPOINT IS UNDER 1200 */
+
 #searchbar-sociallinks-1200px {
     display: none;
 }
 
 /* INDEX: SEARCH BAR AVAILABLE AT THE TOP RIGHT WHEN BREAKPOINT IS ABOVE 1200 */
+
 #search-form {
     display: flex;
     margin-top: 5px;
@@ -123,12 +131,12 @@ p {
 }
 
 #search-box {
-    width:220px;
+    width: 220px;
     background: white;
     font-family: 'Cabin', sans-serif;
     color: #585858;
     padding: 10px;
-    border-radius:10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
     border: 1px solid #b9b9b9;
     border-style: solid none solid solid;
     border: 1px solid #b9b9b9;
@@ -137,7 +145,7 @@ p {
 
 #search-btn {
     background: white;
-    background-image: url('/static/images/magnifying-glass.png'); 
+    background-image: url('/static/images/magnifying-glass.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 23px;
@@ -149,8 +157,8 @@ p {
     outline: none;
 }
 
-
 /* INDEX: STREAMING EVENTS LIST STYLE */
+
 .event-name {
     font-size: 18px;
     font-weight: bolder;
@@ -174,123 +182,246 @@ p {
     height: 30px;
 }
 
-
 /* INDEX: ABOUT COOKBOOK P STYLE */
+
 #about p {
     font-size: 16px;
 }
 
 
 
+
+    
+
+
+/*******************************        LISTING RECIPES         *******************************/
+
+/* RECIPE LIST PAGES */
+
+#recipe-list-section {
+    padding: 0;
+    text-align: left;
+}
+
+#intro-header {
+    margin: 0 18px;
+}
+
+#more {
+    display: none;
+}
+
+#button-readmore {
+    margin-bottom: 30px;
+    color: rgb(236, 166, 14);
+    width: auto;
+    background-color: #FFFFFF;
+    border: none;
+    outline: none;
+}
+
+/* MAIN DIV STYLE */
+
+.recipe-list-box {
+    display: flex;
+    padding: 0;
+    margin: 10px 18px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.recipe-list-left-div>img {
+    width: 95px;
+    height: 91px;
+    object-fit: cover;
+    margin-top: 3px;
+}
+
+.recipe-list-right {
+    padding: 0 18px;
+}
+
+.title-recipe {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.recipe-description {
+    display: none;
+}
+
+.readmore {
+    width: 100%;
+    color: rgb(236, 166, 14);
+}
+
+.date-and-star {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    line-height: 0.1;
+}
+
+.rate-in-list {
+    display: flex;
+    align-items: center;
+}
+
+/* small star style */
+.rate-in-list img {
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+    padding-right: 3px;
+}
+
+/* numbers to browse pages i.e. < 1 2 3 4 5 6 > */
+#page-listing {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.listingnum-1200-px {
+    display: none;
+}
+
+/* arrow to browse pages i.e. in < 1 2 3 4 5 6 > */
+.arrow-page {
+    text-align: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #f08e5e;
+    width: 20px;
+    height: 24px;
+    border: 2px solid #f08e5e;
+    border-radius: 45px;
+}
+
 /* BREAKPOINT 768PX */
+
 @media (min-width: 768px) {
     body {
         padding: 0 12px;
     }
-
     /* INDEX: MAIN PIC AT THE TOP ON THE INDEX */
     .main-pic {
         padding: 300px 0;
     }
-
     /* INDEX MAIN CONTAINER - <section> */
-    #index-container{
+    #index-container {
         width: auto;
         margin: 20px;
     }
-
-    /* INDEX: WEEKLY RECIPES IMAGES STYLE */    
+    /* INDEX: WEEKLY RECIPES IMAGES STYLE */
     #weekly-768px {
         margin: auto;
         display: flex;
         justify-content: space-between;
         width: 700px;
     }
-
     #weekly-768px img {
         width: 335px;
         height: 200px;
         object-fit: cover;
     }
-
     .weekly-p-768px {
         width: 335px;
     }
-
     #most-rated {
         margin: auto;
         width: 700px;
     }
-
-    /* INDEX: MOST RATED RECIPES IMAGES STYLE */ 
+    /* INDEX: MOST RATED RECIPES IMAGES STYLE */
     #most-rated img {
         width: 100%;
         height: 400px;
         object-fit: cover;
     }
-
-    /* INDEX: LATEST RECIPES IMAGES STYLE */ 
+    /* INDEX: LATEST RECIPES IMAGES STYLE */
     .latest-recipes {
         margin: auto;
         display: flex;
         justify-content: space-between;
         width: 700px;
     }
-
     .latest-recipes img {
         width: 335px;
         height: 200px;
         object-fit: cover;
     }
+    .recipe-description {
+        display: block;
+    }
 }
 
-
-
-
 /* BREAKPOINT 992PX */
+
 @media (min-width: 992px) {
     #pic-square {
         display: block;
     }
 }
 
-
-
 /* BREAKPOINT 1200PX */
+
 @media (min-width: 1200px) {
     /* INDEX: HIDE SEARCH BAR AS FIRST ELEMENT TO MOVE IT TO THE RIGHT SECTION */
     #searchbar-576px {
         display: none;
     }
-
     #index-container {
         display: flex;
     }
-
     /* INDEX - LEFT CELL SIZE */
     #index-left {
-        width:65%;
+        width: 65%;
     }
-
-    /* INDEX - RIGHT CELL SIZE */    
+    /* INDEX - RIGHT CELL SIZE */
     #index-right {
         width: 25%;
         margin-left: 80px;
     }
-
-    /* INDEX: MAKING THE SEARCH BAR AVAILABLE IN THE RIGHT CELL */    
+    /* INDEX: MAKING THE SEARCH BAR AVAILABLE IN THE RIGHT CELL */
     #searchbar-sociallinks-1200px {
         display: block;
     }
-
     /* INDEX: DIV WITH SOCIAL NETWORK ICONS */
     .follow-us {
         width: 300px;
     }
-
     .follow-us img {
         margin: 5px;
         width: 25px;
         height: 25px;
+    }
+
+
+    
+    /* RECIPE LIST PAGES */
+    #recipe-list-section {
+        padding: 0;
+        text-align: left;
+    }
+
+    #intro-header {
+        margin: 0 120px;
+    }
+
+    /* MAIN DIV STYLE */
+    .recipe-list-box {
+        margin: 10px 200px 25px;
+    }
+
+    #page-listing {
+        width: 50%;
+    }
+
+    .listingnum-1200-px {
+        display: block;
     }
 }
