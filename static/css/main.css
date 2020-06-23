@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     background-image: url("/static/images/bg.jpg");
+    color: #141414;
 }
 
 .bg-color-white {
@@ -14,10 +15,12 @@ body {
 
 h6, h5, h4, h3, h2, h1 {
     font-family: 'Source Sans Pro', sans-serif;
+    color: #141414;
 }
 
 p {
     font-family: 'Didact Gothic', sans-serif;
+    color: #141414;
 }
 
 /* INDEX: MAIN PIC AT THE TOP ON THE INDEX */
@@ -140,10 +143,12 @@ p {
     border: 1px solid #b9b9b9;
     border-style: solid none solid solid;
     border: 1px solid #b9b9b9;
+    height: 40px; /* added this to fix the issue */
     outline: none;
 }
 
 #search-btn {
+    height: 40px; /* added this to fix the issue */
     background: white;
     background-image: url('/static/images/magnifying-glass.png');
     background-repeat: no-repeat;
@@ -153,8 +158,8 @@ p {
     border-radius: 0 10px 10px 0;
     border-style: solid solid solid none;
     border: 1px solid #b9b9b9;
-    font-weight: bold;
     outline: none;
+    margin-top: 6px;
 }
 
 /* INDEX: STREAMING EVENTS LIST STYLE */
