@@ -27,7 +27,7 @@ nav li {
 }
 
 nav li a {
-    padding: 20px 15px;
+    padding: 20px 12px;
     font-family: 'Cabin', sans-serif;
     font-size: 15px;
     color: white;
@@ -81,7 +81,7 @@ nav li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 20px;
     background-color: #010506;
     border: 3px solid #F0641E;
@@ -91,9 +91,9 @@ nav li a:hover {
 #myLinks a:link {
     font-family: 'Cabin', sans-serif;
     border: 1px solid rgb(36, 30, 27);
-    width: 100%;
+    width: 97%;
     margin: 0;
-    padding: 4px;
+    padding: 5px;
     color: white;
     text-decoration: none;
     font-size: 22px;

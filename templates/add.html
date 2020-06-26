@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="bg-color-white">
+
+  <section>
+
+    <header id="intro-header">
+      <h1>Create a new recipe</h1>
+    </header>
+
+    <div class="container">
+
+      <form action="/action_page.php">
+
+        <div id="picarea">
+          <img id="output" src="/static/images/uploadpic.png" alt="upload-picture" />
+          <label class="button-pic" for="input-id">Select a file</label>
+          <input type="file" id="input-id"
+            onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])" name="picture">
+        </div>
+
+        <br /><br /><br />
+        <label for="ptime">Prep Time</label>
+        <input type="text" id="ptime" name="ptime" placeholder="Preparation time">
+        <label for="ctime">Cook time</label>
+        <input type="text" id="ctime" name="ctime" placeholder="Cooking time">
+        <label for="serves">Prep Time</label>
+        <input type="text" id="serves" name="serves" placeholder="Number of servings">
+        <label for="slevel">Skill level</label>
+        <input type="text" id="slevel" name="slevel" placeholder="Beginner, Intermediate, Pro">
+        <label for="title">Recipe title</label>
+        <input type="text" id="title" name="title" placeholder="Recipe title">
+        <label for="subject">Ingredients</label>
+        <textarea id="ingredients" name="ingredients" placeholder="Your ingredients here" style="height:200px"></textarea>
+        <label for="subject">Method</label>
+        <textarea id="method" name="method" placeholder="Write each step on its own line" style="height:200px"></textarea>
+
+        <div class="btn-cont">
+          <input type="submit" value="Submit">
+        </div>
+
+      </form>
+      
+    </div>
+
+  </section>
+
+</main>
+
+{% endblock %}

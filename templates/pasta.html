@@ -7,8 +7,7 @@
 
     <header id="intro-header">
       <h1>Pasta</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fuga alias minus ut, veritatis, tenetur placeat molestias rem architecto facere nesciunt necessitatibus dolores? <span id="dots">...</span><span id="more">Minima cum impedit omnis possimus dicta sed! Ipsam debitis laboriosam porro ab obcaecati repellat ipsum rerum quas repudiandae, dolor maxime accusantium iusto dolores optio commodi culpa tenetur magnam magni eaque error esse quis quia necessitatibus. Exercitationem, quas? Numquam alias corporis consequatur voluptas, molestias praesentium unde nam, impedit eveniet vitae officiis enim velit dolorem magni fuga! Quidem suscipit rerum, beatae dolorum amet dicta ipsam repudiandae voluptatibus nulla ipsa, enim officia debitis est. Reprehenderit, impedit? Distinctio exercitationem reprehenderit, illo quia temporibus ad sed esse totam sapiente voluptates iusto corporis voluptate neque commodi quidem, officia officiis cumque non quod vitae, ut suscipit atque magnam dolore! Blanditiis vero minima in culpa. Consequatur, nisi exercitationem consequuntur doloribus vitae necessitatibus minus obcaecati repellat quis ab assumenda non tempora illum facilis iste, asperiores reprehenderit dignissimos officia? Repellat aliquam atque minus fugiat ipsum beatae perferendis voluptate rerum reprehenderit molestias, quas nobis! Nesciunt quisquam voluptas eum dicta sequi. Fuga deserunt obcaecati id iusto cum tempora impedit, sed veritatis vel aliquid iste esse cupiditate placeat molestiae laboriosam voluptas quis sint corporis vitae maiores sapiente sit. Aliquid, officia!</span></p> 
-      <button onclick="readmore_js()" id="button-readmore">Read more</button>
+      <p>Don't let complicated recipes stand in the way of you and carbs. These easy pasta dishes will make dinner stress-free, and are delish enough that you'll be happy to have leftovers. From classics like chicken alfredo and Crock-Pot spaghetti to out-of-the-box eats like ravioli lasagna, there's something for everyone here.</p> 
     </header>
 
 
@@ -297,24 +296,4 @@
 
 </main>
 
-<script>
-
-function readmore_js() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("button-readmore");
-    
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-
-</script>
 {% endblock %}

@@ -38,12 +38,20 @@ def baking():
 def contact():
     return render_template("contact.html")
 
+
+@app.route('/recipe')
+def recipe():
+    return render_template("recipe.html")
+
+
 @app.route('/profile')
 def profile():
     return render_template("profile.html")
 
 
-
+@app.route('/add')
+def add():
+    return render_template("add.html")
 
 
 
@@ -54,10 +62,10 @@ if __name__ =="__main__":
     app.run(host=os.getenv("IP"),
        port=int(os.getenv("PORT")),
        debug=True)
-
-
-
 """
+
+
+
 if __name__ == "__main__":
   app.run(debug=True)
 """

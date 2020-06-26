@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/recipe.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=Source+Sans+Pro:wght@600&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=Source+Sans+Pro:wght@600&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Media Cookbook</title>
 </head>
@@ -19,7 +20,9 @@
 
   <!-- HEADER START -->
   <header id="header">
-    <img src="/static/images/cookbook.png" id="header-logo" alt="Cookbook" />
+    <a href="{{ url_for('index') }}">
+      <img src="/static/images/cookbook.png" id="header-logo" alt="Cookbook Logo" />
+    </a>
     <nav>
       <ul>
         <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -42,7 +45,6 @@
     <!-- BURGER MENU START -->
     <div id="myLinks">
       <a href="{{ url_for('profile') }}">Profile</a>
-      <p></p>
       <a href="{{ url_for('index') }}">Home</a>
       <a href="{{ url_for('pasta') }}">Pasta</a>
       <a href="{{ url_for('meatandfish') }}">Meat&Fish</a>

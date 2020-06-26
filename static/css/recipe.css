@@ -44,7 +44,7 @@ ol li {
 
 
 .color1 {
-    background-color: #ffdec7;
+    background-color: #fcf6f3;
 }
 
 .color2 {
@@ -75,8 +75,35 @@ ol li {
 }
 
 
+.mayalsolike {
+    display: block;
+    margin: 40px 30px 70px;
+}
 
 
+.mayalsolike-singlecell {
+    width: 280px;
+    margin: 20px auto 60px;    
+}
+
+
+.mayalsolike img {
+    width: 280px;
+    height: 190px;
+    object-fit: cover;
+}
+
+
+.mayalsolike-title {
+    font-size: 18px;
+}
+
+@media (min-width: 576px) {
+    .mayalsolike {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 
 @media (min-width: 768px) {
     #recipe-cont-head {
@@ -95,11 +122,33 @@ ol li {
     #recipe-cont-head img {
         height: 70%;
     }
+
 }
 
 
 @media (min-width: 992px) {
     #pic-square {
         display: block;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+
+    .mayalsolike {
+        width: 1200px;
+    }
+
+    .mayalsolike-singlecell {
+        width: 320px;
+        margin: 20px;
+    }
+    
+    
+    .mayalsolike img {
+        width: 280px;
+        height: 180px;
+        object-fit: cover;
     }
 }
