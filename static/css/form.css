@@ -13,6 +13,7 @@ input[type=text], select, textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+    outline: none;
   }
 
   input[type=email] {
@@ -24,6 +25,7 @@ input[type=text], select, textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+    outline: none;
   }
 
   
@@ -46,7 +48,62 @@ input[type=text], select, textarea {
     border-radius: 5px;
     background-color: #FFFFFF;
     padding: 20px;
+    margin: auto;
   }
+
+  .btn-cont {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    margin-bottom: 50px;
+  }
+
+
+/*** *** *** START PHOTO *** *** ***/
+
+#picarea {
+  display: block;
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+
+}
+
+#picarea img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 30px;
+  object-fit: cover;
+}
+
+
+
+.button-pic {
+  background-color: #f08e5e;;
+  color: white;
+  padding: 4px 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-pic:hover {
+  background-color: #f0c4ae;
+  outline: none;
+}
+
+#input-id {
+  display: none;
+}
+
+
+/*** *** *** END PHOTO *** *** ***/
+
+
 
 
 
