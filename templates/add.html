@@ -11,30 +11,39 @@
 
     <div class="container">
 
-      <form action="/action_page.php">
+      <form action="{{ url_for('insert_recipe') }}" method="POST" enctype = "multipart/form-data">
 
         <div id="picarea">
           <img id="output" src="/static/images/uploadpic.png" alt="upload-picture" />
           <label class="button-pic" for="input-id">Select a file</label>
           <input type="file" id="input-id"
-            onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])" name="picture">
+            onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])" name="picture" required>
         </div>
 
         <br /><br /><br />
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Recipe title" required>
+        <select id="category" name="category_name" required>
+          <option value="" selected>Choose Category</option>
+          <option value="pasta">Pasta</option>
+          <option value="meatfish">Meat&Fish</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="dessert">Dessert</option>
+          <option value="baking">Baking</option>
+        </select>
         <label for="ptime">Prep Time</label>
-        <input type="text" id="ptime" name="ptime" placeholder="Preparation time">
+        <input type="text" id="ptime" name="ptime" placeholder="Preparation time" required>
         <label for="ctime">Cook time</label>
-        <input type="text" id="ctime" name="ctime" placeholder="Cooking time">
-        <label for="serves">Prep Time</label>
-        <input type="text" id="serves" name="serves" placeholder="Number of servings">
+        <input type="text" id="ctime" name="ctime" placeholder="Cooking time" required>
+        <label for="serves">Serves</label>
+        <input type="text" id="serves" name="serves" placeholder="Number of servings" required>
         <label for="slevel">Skill level</label>
-        <input type="text" id="slevel" name="slevel" placeholder="Beginner, Intermediate, Pro">
-        <label for="title">Recipe title</label>
-        <input type="text" id="title" name="title" placeholder="Recipe title">
-        <label for="subject">Ingredients</label>
-        <textarea id="ingredients" name="ingredients" placeholder="Your ingredients here" style="height:200px"></textarea>
-        <label for="subject">Method</label>
-        <textarea id="method" name="method" placeholder="Write each step on its own line" style="height:200px"></textarea>
+        <input type="text" id="slevel" name="slevel" placeholder="easy, intermediate, difficult" required>
+
+        <label for="ingredients">Ingredients</label>
+        <textarea id="ingredients" name="ingredients" placeholder="Write each ingredient on a new line" style="height:200px" required></textarea>
+        <label for="method">Method</label>
+        <textarea id="method" name="method" placeholder="Write each step on its own line" style="height:200px" required></textarea>
 
         <div class="btn-cont">
           <input type="submit" value="Submit">

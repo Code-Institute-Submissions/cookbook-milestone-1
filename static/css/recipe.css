@@ -51,7 +51,12 @@ ol li {
     background: #FFFFFF;
 }
 
-
+#userrecipe {
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+    color: #F0641E;
+    text-decoration: underline;
+}
 
 .rating-share {
     display: flex;

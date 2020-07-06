@@ -13,17 +13,22 @@
     </header>
     -->
 
+{% for recipe in Recipes %}
+    {{recipe.author}}
+    {{recipe.title}}
+{% endfor %}
 
         <div>
             <div id="recipe-cont-head">
                 <div>
                     <h1>Pumpkin curry with chickpeas</h1>
+                    <p>Author: <span id="userrecipe">Renato</span></p>
                     <p>Prep time: 20 minutes</p>
                     <p>Cooking time: none</p>
                     <p>Serves: 4</p>
                     <p>Skill level: Easy</p>
-                    <p>This delicious breaded fish with sweet potato fries is the perfect mid-week treat.</p>
-                    
+                    <br />
+                    <p>Submitted: 15 Jun 2020</p>                    
                     <div class="rating-share">
                         <div>
                             <span class="fa fa-star checked"></span>
