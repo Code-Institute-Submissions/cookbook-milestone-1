@@ -6,29 +6,26 @@
     <section id="section-recipe">
         <!-- SECTION MEAT & FISH CONTAINER START -->
 
-        <!--
-    <header id="intro-header">
-      <h1>Contact Me</h1>
-      <p>If you would like to contact me with a query, comment or suggestion, please use the following form, I will answer as soon as possible. Thank you.</p> 
-    </header>
-    -->
 
-{% for recipe in Recipes %}
-    {{recipe.author}}
-    {{recipe.title}}
-{% endfor %}
 
         <div>
             <div id="recipe-cont-head">
                 <div>
-                    <h1>Pumpkin curry with chickpeas</h1>
-                    <p>Author: <span id="userrecipe">Renato</span></p>
-                    <p>Prep time: 20 minutes</p>
-                    <p>Cooking time: none</p>
-                    <p>Serves: 4</p>
-                    <p>Skill level: Easy</p>
-                    <br />
-                    <p>Submitted: 15 Jun 2020</p>                    
+                    <h1>{{recipe.title}}</h1>
+                    <div id="editdelete">
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">EDIT</a>
+                        <a href="javascript:del()">DELETE</a>
+                      <!--  <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}">DELETE</a> -->
+                    </div>
+                    <p>Author: <span id="userrecipe">Renato</span></p>  <!-- I added author ID in MongoDB, but since this blog is an example, I will use my name in HTML -->
+                    <p>Category: {{recipe.category_name}}</p>
+                    <p>Prep time: {{recipe.ptime}}</p>
+                    <p>Cooking time: {{recipe.ctime}}</p>
+                    <p>Serves: {{recipe.serves}}</p>
+                    <p>Skill level: {{recipe.slevel}}</p>
+                    
+                    <p>Submitted: {{recipe.posted}}</p>
+                      
                     <div class="rating-share">
                         <div>
                             <span class="fa fa-star checked"></span>
@@ -37,7 +34,7 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-
+                        <br />
                         <div>
                             <img src="/static/images/facebook.png" alt="Facebook">
                             <img src="/static/images/instagram.png" alt="Instagram">
@@ -47,33 +44,36 @@
                     </div>
                 </div>
                 <div>
-                    <img src="/static/images/images/2.jpg" alt="RecipePic" />
+                    <img id="headimage" src="{{ url_for('static', filename='images/')}}{{recipe.imgfullname}}"  alt="recipe_picture" />
                 </div>
             </div>
             <div id="recipe-cont-body">
                 <div>
                     <h1>Ingredients:</h1>
-                    <p class="color1">4 x 140g portions traditionally smoked haddock</p>
-                    <p class="color2">knob of butter</p>
-                    <p class="color1">1 lemon, quartered</p>
-                    <p class="color2">Pack of 4 Bubble & Squeak Cakes (or potato rösti)</p>
-                    <p class="color1">4 large eggs</p>
-                    <p class="color2">4 handfuls spinach, washed</p>
-                    <p class="color1">black pepper</p>
-                    <p class="color2">1 pack of ready-made hollandaise sauce (optional)</p>
-                    <p class="color1">Pinch dried Dulse seaweed flakes (optional)</p>
+
+                    {% set lines = recipe.ingredients.splitlines() %}
+                    {% set mylist = lines|length %}
+                    {% for i in range(mylist) %}
+                        {% if (i % 2 == 0) %}
+                            <p class="color1">{{lines[i]}}</p>
+                        {% else %}
+                            <p class="color2">{{lines[i]}}</p>
+                        {% endif %}
+                    {% endfor %}
                 </div>
                 <div>
                     <h1>Method:</h1>
                     <ol>
-                        <li><span>Preheat the oven to 180C/fan 160C/gas</span></li>
-                        <li><span>Place the haddock, butter and 2 lemon quarters on a piece of. foil. Wrap carefully in the foil and place on a baking sheet with the Bubble & Squeak Cakes.</span></li>
-                        <li><span>Bake in the oven for 15 minutes, turning the cakes halfway through the cooking time.</span></li>
-                        <li><span>A few minutes before the fish is ready, bring a pan of water to a simmer. Poach the eggs for a few minutes, until cooked to your liking.Drain the eggs carefully on kitchen paper.</span></li>
-                        <li><span>Place the spinach in a colander and pour over boiling water until it’s wilted. Drain well.</span></li>
-                        <li><span>Remove the tray from the oven. Put the bubble and squeak cakes on 4 plates and top with the spinach. Carefully unwrap the fish and place a piece on top of each of the bubble and squeak cakes and the spinach, drizzling over the buttery juices.</span></li>
-                        <li><span>Top with the eggs, a sprinkling of seaweed flakes (if using), and some black pepper. Serve with the hollandaise sauce (if using) and the remaining lemon.</span></li>
-                      </ol>
+                        {% set mlines = recipe.method.splitlines() %}
+                        {% set mmylist = mlines|length %}
+                        {% for mi in range(mmylist) %}
+                            {% if lines[mi] == '' %}
+                                {% set mi = mi -1 %}
+                            {% else %}
+                                <li><span>{{mlines[mi]}}</span></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
                 </div>
             </div>
 
@@ -157,11 +157,15 @@
 
         </div>
 
-
-
-
     </section> <!-- SECTION MEAT & FISH CONTAINER END -->
 
 </main>
+
+<script>
+function del() {
+  var choice = prompt(" The deletion is irreversible, please write yes to proceed:");
+  if (choice == "yes") window.location.href = "{{ url_for('delete_recipe', recipe_id=recipe._id) }}";
+} 
+</script>
 
 {% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="bg-color-white">
+
+  <section>
+
+    <header id="intro-header">
+      <h1>Update your recipe</h1>
+    </header>
+
+    <div class="container">
+
+      <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" enctype="multipart/form-data">
+
+        <div id="picarea">
+          <img id="output" src="/static/images/{{recipe.imgfullname}}" alt="upload-picture" />
+          <label class="button-pic" for="input-id">Select a file</label>
+          <input type="file" id="input-id"
+            onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])" name="picture">
+        </div>
+
+        <br /><br /><br />
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" value="{{recipe.title}}">
+        <!-- for tutti, se finche' e' diverso non mettere selected altrimenti metti selected -->
+
+        <select id="category" name="category_name">
+          <option value="Pasta" {{ 'selected' if recipe.category_name == 'Pasta' else '' }}>Pasta</option>
+		      <option value="Meat&Fish" {{ 'selected' if recipe.category_name == 'Meat&Fish' else '' }}>Meat&Fish</option>
+          <option value="Vegetarian" {{ 'selected' if recipe.category_name == 'Vegetarian' else '' }}>Vegetarian</option>
+          <option value="Dessert" {{ 'selected' if recipe.category_name == 'Dessert' else '' }}>Dessert</option>
+          <option value="Baking" {{ 'selected' if recipe.category_name == 'Baking' else '' }}>Baking</option>
+        </select>
+
+        <label for="ptime">Prep Time</label>
+        <input type="text" id="ptime" name="ptime" value="{{recipe.ptime}}">
+        <label for="ctime">Cook time</label>
+        <input type="text" id="ctime" name="ctime" value="{{recipe.ctime}}">
+        <label for="serves">Serves</label>
+        <input type="text" id="serves" name="serves" value="{{recipe.serves}}">
+
+        <select id="slevel" name="slevel">
+          <option value="Easy" {{ 'selected' if recipe.slevel == 'Easy' else '' }}>Easy</option>
+          <option value="Intermediate" {{ 'selected' if recipe.slevel == 'Intermediate' else '' }}>Intermediate</option>
+          <option value="Advanced" {{ 'selected' if recipe.slevel == 'Advanced' else '' }}>Advanced</option>
+        </select>
+
+        <label for="ingredients">Ingredients</label>
+        <textarea id="ingredients" name="ingredients" style="height:200px">{{recipe.ingredients}}</textarea>
+        <label for="method">Method</label>
+        <textarea id="method" name="method" style="height:200px">{{recipe.method}}</textarea>
+
+        <div class="btn-cont">
+          <input type="submit" value="Submit">
+        </div>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+
+{% endblock %}
