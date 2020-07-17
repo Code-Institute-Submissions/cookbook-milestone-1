@@ -5,6 +5,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 
+
 app = Flask(__name__)
 
 # app.config["IMAGE_UPLOADS"] = 'images'
@@ -31,7 +32,8 @@ def meatandfish():
 
 @app.route('/vegetarian')
 def vegetarian():
-    return render_template("vegetarian.html")
+    tot_doc = mongo.db.recipes.count()
+    return render_template("vegetarian.html", recipes=mongo.db.recipes.find(), documents=tot_doc)
 
 
 @app.route('/dessert')
@@ -110,9 +112,16 @@ def update_recipe(recipe_id):
     return redirect(url_for('recipe', recipe_id=recipe_id))
 
 
+
 @ app.route('/add')
 def add():
     return render_template("add.html", recipes=mongo.db.recipes.find())
+
+
+@ app.route('/sent')
+def sent():
+    return render_template("sent.html", recipes=mongo.db.recipes.find())
+
 
 
 @ app.route('/insert_recipe', methods=['POST'])
@@ -156,13 +165,13 @@ def insert_recipe():
 
 
 
-"""
 if __name__ =="__main__":
     app.run(host=os.getenv("IP"),
        port=int(os.getenv("PORT")),
        debug=True)
+
+
 """
-
-
 if __name__ == "__main__":
     app.run(debug=True)
+"""

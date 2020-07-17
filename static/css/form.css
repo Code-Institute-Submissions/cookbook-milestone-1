@@ -149,7 +149,11 @@ input[type=text], select, textarea {
 
 
 
-
+#confirmation {
+  text-align: center;
+  margin: 150px 40px 400px;
+  font-size: 20px;
+}
 
 
   @media (min-width: 768px) {

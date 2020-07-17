@@ -7,11 +7,10 @@
     <header class="main-pic">
 
       <div id="pic-square">
-        <h1>Spring Vegetable Cous Cous</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat id aperiam fuga blanditiis natus. Mollitia
-          pariatur, alias magni tempora eius assumenda iste quia dicta velit dolor, ab tenetur, vitae voluptatem?</p>
+        <h1>Unadon (grilled eel rice bowl)</h1>
+        <p>Have fun making one of the Japanese favorites, Unadon (grilled eel rice bowl), in your own kitchen. Sweet caramelized homemade unagi sauce drizzled over perfectly grilled unagi and steamed rice.</p>
 
-        <p class="gold-text">Read More</p>
+        <a id="gold-text" href="{{ url_for('recipe', recipe_id='5f034b69b91c57308938cf82') }}">Read More</a>
       </div>
 
     </header>
@@ -121,6 +120,11 @@
           <input id="search-box" name="bar" type="text" placeholder="Search for recipes or ingredients!" />
           <input id="search-btn" value="" type="submit" />
         </form>
+
+
+        <h1>Add a new recipe</h1>
+        <p class="addnew-p">Hello Renato! Click <a href="{{ url_for('add') }}">here</a> to add a new recipe.</p>
+
 
         <!-- FOLLOW US LINKS - START AT BREAKPOINT 1200PX -->
         <div class="follow-us">
