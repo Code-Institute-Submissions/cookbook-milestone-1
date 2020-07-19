@@ -139,6 +139,15 @@ p {
     display: none;
 }
 
+.addnew_rep_576px {
+    display: block;
+    margin-bottom: 80px;
+}
+
+.addnew_rep {
+    display: none;
+}
+
 /* INDEX: SEARCH BAR AVAILABLE AT THE TOP RIGHT WHEN BREAKPOINT IS ABOVE 1200 */
 
 #search-form {
@@ -241,7 +250,14 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.recipe-list-left-div>img {
+.recipe-list-left-div {
+    width: 95px;
+    height: 91px;
+    object-fit: cover;
+    margin-top: 3px;
+}
+
+.imgsmall {
     width: 95px;
     height: 91px;
     object-fit: cover;
@@ -387,6 +403,7 @@ p {
     .recipe-description {
         display: block;
     }
+
 }
 
 /* BREAKPOINT 992PX */
@@ -404,6 +421,12 @@ p {
     #searchbar-576px {
         display: none;
     }
+
+    .addnew_rep_576px {
+        display: none;
+    }
+
+
     #index-container {
         display: flex;
     }
@@ -420,6 +443,11 @@ p {
     #searchbar-sociallinks-1200px {
         display: block;
     }
+
+    .addnew_rep {
+        display: block;
+    }
+
     /* INDEX: DIV WITH SOCIAL NETWORK ICONS */
     .follow-us {
         width: 300px;

@@ -11,19 +11,20 @@
     </header>
 
 
+    {% for recipe in recipes %}
 
     <div class="recipe-list-box">
       <div class="recipe-list-left-div">
-        <img src="/static/images/images/2.jpg" alt="recipe-foto"/>
+        <a href="{{ url_for('recipe', recipe_id=recipe._id) }}"><img class="imgsmall" src="{{ url_for('static', filename='images/')}}{{recipe.imgfullname}}"  alt="recipe_picture" /></a>
       </div>
 
       <div class="recipe-list-right">
-        <p class="title-recipe">Pumpkin curry with chickpeas</p>
-        <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
+        <p class="title-recipe">{{recipe.title}}</p>
+        <p class="recipe-description"> {{ recipe.method[:150] + "... " if recipe.method|length > 75 else recipe.method }}<a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="readmore">Read More</a></p>
 
         <div class="date-and-star">
           <div>
-            <p><small>June 07, 2020</small></p>
+            <p><small>{{recipe.posted}}</small></p>
           </div>
           <div class="rate-in-list">
             <img src="/static/images/star.png" alt="Rate" />
@@ -33,257 +34,7 @@
       </div>
 
     </div> <!-- recipe-list-box END-->
-
-
-
-
-
-    
-<!-- START LIST OF EXAMPLES FOR THE FRONT END -->
-<!-- THE FOLLOWING LIST WILL BE DELETED ONCE PYTHON IS IMPLEMENTED -->
-<div class="recipe-list-box">
-  <div class="recipe-list-left-div">
-    <img src="/static/images/images/3.jpg" alt="recipe-foto"/>
-  </div>
-
-  <div class="recipe-list-right">
-    <p class="title-recipe">Lemon drizzle cake</p>
-    <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
-
-    <div class="date-and-star">
-      <div>
-        <p><small>June 07, 2020</small></p>
-      </div>
-      <div class="rate-in-list">
-        <img src="/static/images/star.png" alt="Rate" />
-        <p><small>4,2</small></p>
-      </div>
-    </div>
-  </div>
-
-</div> <!-- recipe-list-box END-->
-
-
-
-<div class="recipe-list-box">
-  <div class="recipe-list-left-div">
-    <img src="/static/images/images/4.jpg" alt="recipe-foto"/>
-  </div>
-
-  <div class="recipe-list-right">
-    <p class="title-recipe">Ultimate chocolate cake</p>
-    <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
-
-    <div class="date-and-star">
-      <div>
-        <p><small>June 07, 2020</small></p>
-      </div>
-      <div class="rate-in-list">
-        <img src="/static/images/star.png" alt="Rate" />
-        <p><small>4,2</small></p>
-      </div>
-    </div>
-  </div>
-
-</div> <!-- recipe-list-box END--> 
-
-
-
-
-<div class="recipe-list-box">
-  <div class="recipe-list-left-div">
-    <img src="/static/images/images/5.jpg" alt="recipe-foto"/>
-  </div>
-
-  <div class="recipe-list-right">
-    <p class="title-recipe">Chilli con carne recipe</p>
-    <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
-
-    <div class="date-and-star">
-      <div>
-        <p><small>June 07, 2020</small></p>
-      </div>
-      <div class="rate-in-list">
-        <img src="/static/images/star.png" alt="Rate" />
-        <p><small>4,2</small></p>
-      </div>
-    </div>
-  </div>
-
-</div> <!-- recipe-list-box END--> 
-
-
-
-<div class="recipe-list-box">
-  <div class="recipe-list-left-div">
-    <img src="/static/images/images/6.jpg" alt="recipe-foto"/>
-  </div>
-
-  <div class="recipe-list-right">
-    <p class="title-recipe">Carrot cake</p>
-    <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
-
-    <div class="date-and-star">
-      <div>
-        <p><small>June 07, 2020</small></p>
-      </div>
-      <div class="rate-in-list">
-        <img src="/static/images/star.png" alt="Rate" />
-        <p><small>4,2</small></p>
-      </div>
-    </div>
-  </div>
-
-</div> <!-- recipe-list-box END-->   
-
-
-
-<div class="recipe-list-box">
-  <div class="recipe-list-left-div">
-    <img src="/static/images/images/7.jpg" alt="recipe-foto"/>
-  </div>
-
-  <div class="recipe-list-right">
-    <p class="title-recipe">Best ever chocolate brownies recipe</p>
-    <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
-
-    <div class="date-and-star">
-      <div>
-        <p><small>June 07, 2020</small></p>
-      </div>
-      <div class="rate-in-list">
-        <img src="/static/images/star.png" alt="Rate" />
-        <p><small>4,2</small></p>
-      </div>
-    </div>
-  </div>
-
-</div> <!-- recipe-list-box END--> 
-
-
-
-
-<div class="recipe-list-box">
-  <div class="recipe-list-left-div">
-    <img src="/static/images/images/8.jpg" alt="recipe-foto"/>
-  </div>
-
-  <div class="recipe-list-right">
-    <p class="title-recipe">Spiced carrot & lentil soup</p>
-    <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
-
-    <div class="date-and-star">
-      <div>
-        <p><small>June 07, 2020</small></p>
-      </div>
-      <div class="rate-in-list">
-        <img src="/static/images/star.png" alt="Rate" />
-        <p><small>4,2</small></p>
-      </div>
-    </div>
-  </div>
-
-</div> <!-- recipe-list-box END-->
-
-
-
-
-<div class="recipe-list-box">
-  <div class="recipe-list-left-div">
-    <img src="/static/images/images/9.jpg" alt="recipe-foto"/>
-  </div>
-
-  <div class="recipe-list-right">
-    <p class="title-recipe">Chicken & chorizo jambalaya</p>
-    <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
-
-    <div class="date-and-star">
-      <div>
-        <p><small>June 07, 2020</small></p>
-      </div>
-      <div class="rate-in-list">
-        <img src="/static/images/star.png" alt="Rate" />
-        <p><small>4,2</small></p>
-      </div>
-    </div>
-  </div>
-
-</div> <!-- recipe-list-box END--> 
-
-
-
-
-
-<div class="recipe-list-box">
-  <div class="recipe-list-left-div">
-    <img src="/static/images/images/10.jpg" alt="recipe-foto"/>
-  </div>
-
-  <div class="recipe-list-right">
-    <p class="title-recipe">Summer-in-winter chicken</p>
-    <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
-
-    <div class="date-and-star">
-      <div>
-        <p><small>June 07, 2020</small></p>
-      </div>
-      <div class="rate-in-list">
-        <img src="/static/images/star.png" alt="Rate" />
-        <p><small>4,2</small></p>
-      </div>
-    </div>
-  </div>
-
-</div> <!-- recipe-list-box END-->  
-
-
-
-
-<div class="recipe-list-box">
-  <div class="recipe-list-left-div">
-    <img src="/static/images/images/11.jpg" alt="recipe-foto"/>
-  </div>
-
-
-  <div class="recipe-list-right">
-    <p class="title-recipe">Spicy root & lentil casserole</p>
-    <p class="recipe-description">Make this quick and easy dhal with just four ingredients: chickpeas, spinach, coconut cream and aubergine pickle. It's vegan, gluten-free and so tasty... <span class="readmore">Read More</span></p>
-
-    <div class="date-and-star">
-      <div>
-        <p><small>June 07, 2020</small></p>
-      </div>
-      <div class="rate-in-list">
-        <img src="/static/images/star.png" alt="Rate" />
-        <p><small>4,2</small></p>
-      </div>
-    </div>
-  </div>
-
-</div> <!-- recipe-list-box END-->
-
-
-
-
-
-
-<!-- PAGE LISTING - i.e.  < 1 2 3 4 5 6 > -->
-<!-- THIS Div is for the Front End and I will improve it with a function by implementing Python -->
-
-<div id="page-listing">
-  <p class="arrow-page"><</p>
-  <p>1</p>
-  <p>2</p>
-  <p>3</p>
-  <p>4</p>
-  <p>5</p>
-  <p>6</p>
-  <p class="listingnum-1200-px">7</p>
-  <p class="listingnum-1200-px">8</p>
-  <p class="listingnum-1200-px">9</p>
-  <p class="listingnum-1200-px">10</p>
-  <p class="arrow-page">></p>
-</div>
+    {% endfor %}
 
 
 

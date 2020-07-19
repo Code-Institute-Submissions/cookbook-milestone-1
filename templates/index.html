@@ -23,30 +23,31 @@
 
       <div id="searchbar-576px">
         <h1>Find a recipe</h1>
-        <form id="search-form" action="/search" method="get">
-          <input id="search-box" name="bar" type="text" placeholder="Search for recipes or ingredients!" />
+        <form id="search-form" action="{{ url_for('search', mysearch=mysearch) }}" method="POST">
+          <input id="search-box" name="mysearch" type="text" placeholder="Search by any ingredient!" />
           <input id="search-btn" value="" type="submit" />
         </form>
       </div>
 
+
+      <div class="addnew_rep_576px">
+        <h1>Add a new recipe</h1>
+        <p class="addnew-p">Hello Renato! Click <a href="{{ url_for('add') }}">here</a> to add a new recipe.</p>
+      </div>
 
       <!-- WEEKLY RECIPES SECTION -->
       <h1>Weekly recipes</h1>
       <div id="weekly-768px">
 
         <article>
-          <p class="recipe-name">Masala chicken curry hot</p>
-          <img src="/static/images/masala.jpg" alt="Masala" />
-          <p class="weekly-p-768px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, beatae quam? Perferendis
-            reprehenderit
-            magni ducimus officia asperiores iste quidem, aliquid assumenda fuga provident rerum illo accusantium,
-            eveniet sint excepturi rem.</p>
+          <p class="recipe-name">Meat fondue</p>
+          <a href="{{ url_for('recipe', recipe_id='5f131804b53b9f677a272add') }}"><img src="/static/images/5f131804b53b9f677a272add.jpg" alt="Meat fondue" /></a>
+          <p class="weekly-p-768px">Prepare your sauces (see below) in advance, and put in little bowls around the fondue burner, along with the meat, bread and salad. Season the meat...</p>
         </article>
         <article>
-          <p class="recipe-name">Masala chicken curry hot</p>
-          <img src="/static/images/chickencurry.jpg" alt="Chicken" />
-          <p class="weekly-p-768px">Cook our healthy chicken Madras curry and ditch the takeaway menu. This simple family
-            dinner is full of fragrant spices and tender pieces of chicken</p>
+          <p class="recipe-name">Baked ratatouille & goat’s cheese</p>
+          <a href="{{ url_for('recipe', recipe_id='5f1097bd440eaa4c3222205b') }}"><img src="/static/images/5f1097bd440eaa4c3222205b.jpg" alt="GoatCheese" /></a>
+          <p class="weekly-p-768px">Heat 1 tbsp olive oil in a heavy frying pan and gently cook the red onion and garlic for 5 mins until just starting to brown. Scatter over the aubergine and red pepper and sizzle for another 4 mins, adding more oil if you need to. Season well and stir through the paprika...</p>
         </article>
       </div>
 
@@ -56,11 +57,9 @@
       <div id="most-rated">
 
         <article>
-          <p class="recipe-name">Vegetarian Quiche</p>
-          <img src="/static/images/quiche.png" alt="Quiche" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, beatae quam? Perferendis reprehenderit
-            magni ducimus officia asperiores iste quidem, aliquid assumenda fuga provident rerum illo accusantium,
-            eveniet sint excepturi rem.</p>
+          <p class="recipe-name">Easy white bread</p>
+          <a href="{{ url_for('recipe', recipe_id='5f13536fe564fd65b9337013') }}"><img src="/static/images/5f13536fe564fd65b9337013.jpg" alt="Bread" /></a>
+          <p>Mix 500g strong white flour, 2 tsp salt and a 7g sachet of fast-action yeast in a large bowl. Make a well in the centre, then add 3 tbsp olive oil and 300ml water, and mix well. If the dough seems a little stiff, add another 1-2 tbsp water and mix well.</p>
         </article>
       </div>
 
@@ -69,42 +68,42 @@
       <h1>Latest Recipes</h1>
       <div class="latest-recipes">
         <article>
-          <p class="recipe-name">Instant Pot Butter Chicken</p>
+          <p class="recipe-name">Best ever chocolate brownies recipe</p>
           <p><small>June 07, 2020</small></p>
-          <img src="/static/images/food.jpg" alt="latest">
+          <a href="{{ url_for('recipe', recipe_id='5f133e588c526a0a7bb78688') }}"><img src="/static/images/5f133e588c526a0a7bb78688.jpg" alt="brownies"></a>
         </article>
 
         <article>
-          <p class="recipe-name">Homemade Naan</p>
+          <p class="recipe-name">Raspberry bakewell cake</p>
           <p><small>June 07, 2020</small></p>
-          <img src="/static/images/masala.jpg" alt="latest">
+          <a href="{{ url_for('recipe', recipe_id='5f134d898c526a0a7bb7868a') }}"><img src="/static/images/5f134d898c526a0a7bb7868a.jpg" alt="Raspberry"></a>
         </article>
       </div>
 
       <div class="latest-recipes">
         <article>
-          <p class="recipe-name">Cauliflower Fried Rice</p>
+          <p class="recipe-name">Cherry, almond & lemon mascarpone tart</p>
           <p><small>June 07, 2020</small></p>
-          <img src="/static/images/quiche.png" alt="latest">
+          <a href="{{ url_for('recipe', recipe_id='5f134ee18c526a0a7bb7868d') }}"><img src="/static/images/5f134ee18c526a0a7bb7868d.jpg" alt="Cherry"></a>
         </article>
 
         <article>
-          <p class="recipe-name">Cauliflower, Potato, and Pea Curry</p>
+          <p class="recipe-name">New York cheesecake</p>
           <p><small>June 07, 2020</small></p>
-          <img src="/static/images/chickencurry.jpg" alt="latest">
+          <a href="{{ url_for('recipe', recipe_id='5f1351218c526a0a7bb78690') }}"><img src="/static/images/5f1351218c526a0a7bb78690.jpg" alt="cheesecake" /></a>
         </article>
       </div>
 
       <div class="latest-recipes">
         <article>
-          <p class="recipe-name">Spiced Chickpea Flatbread</p>
+          <p class="recipe-name">Medley of summer fruits</p>
           <p><small>June 07, 2020</small></p>
-          <img src="/static/images/food.jpg" alt="latest">
+          <a href="{{ url_for('recipe', recipe_id='5f1351968c526a0a7bb78691') }}"><img src="/static/images/5f1351968c526a0a7bb78691.jpg" alt="summerfruits"></a>
         </article>
         <article>
-          <p class="recipe-name">Chicken Madras Curry</p>
+          <p class="recipe-name">Brilliant banana loaf</p>
           <p><small>June 07, 2020</small></p>
-          <img src="/static/images/chickencurry.jpg" alt="latest">
+          <a href="{{ url_for('recipe', recipe_id='5f133ec88c526a0a7bb78689') }}"><img src="/static/images/5f133ec88c526a0a7bb78689.jpg" alt="bananabread"></a>
         </article>
       </div>
 
@@ -116,14 +115,15 @@
       <!-- SEARCH BAR - STARTS AT BREAKPOINT 1200PX -->
       <div id="searchbar-sociallinks-1200px">
         <h1>Find a recipe</h1>
-        <form id="search-form" action="/search" method="get">
-          <input id="search-box" name="bar" type="text" placeholder="Search for recipes or ingredients!" />
+        <form id="search-form" action="{{ url_for('search', mysearch=mysearch) }}" method="POST">
+          <input id="search-box" name="mysearch" type="text" placeholder="Search by any ingredient!" />
           <input id="search-btn" value="" type="submit" />
         </form>
 
-
-        <h1>Add a new recipe</h1>
-        <p class="addnew-p">Hello Renato! Click <a href="{{ url_for('add') }}">here</a> to add a new recipe.</p>
+        <div class="addnew_rep">
+          <h1>Add a new recipe</h1>
+          <p class="addnew-p">Hello Renato! Click <a href="{{ url_for('add') }}">here</a> to add a new recipe.</p>
+        </div>
 
 
         <!-- FOLLOW US LINKS - START AT BREAKPOINT 1200PX -->
@@ -145,7 +145,7 @@
           <img src="/static/images/streaming.png" alt="streaming" />
           <p class="event-name">How to make bread</p>
         </div>
-        <p><small>July 07, 2020</small></p>
+        <p><small>July 27, 2020</small></p>
         <p>Introducing to the art of breadmaking with this fun and easy starter recipe. Watch to find out the best way
           of making perfect bread.</p>
       </article>
@@ -155,7 +155,7 @@
           <img src="/static/images/streaming.png" alt="streaming" />
           <p class="event-name">Choosing the right tools</p>
         </div>
-        <p><small>July 14, 2020</small></p>
+        <p><small>July 30, 2020</small></p>
         <p>The quality of the cooking equipment that you choose to use is as outstanding as the tools themselves when it
           comes to work and food quality.</p>
       </article>
@@ -165,7 +165,7 @@
           <img src="/static/images/streaming.png" alt="streaming" />
           <p class="event-name">Rules to follow</p>
         </div>
-        <p><small>July 29, 2020</small></p>
+        <p><small>July 31, 2020</small></p>
         <p>Basic Rules of Kitchen Safety. Store knives in a wooden block or in a drawer. Never cook in loose clothes and
           keep long hair tied back. Watch to find out more.</p>
       </article>

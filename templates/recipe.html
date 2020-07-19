@@ -68,7 +68,7 @@
                         {% set mlines = recipe.method.splitlines() %}
                         {% set mmylist = mlines|length %}
                         {% for mi in range(mmylist) %}
-                            {% if lines[mi] == '' %}
+                            {% if mlines[mi] == '' %}
                                 {% set mi = mi -1 %}
                             {% else %}
                                 <li><span>{{mlines[mi]}}</span></li>

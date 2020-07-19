@@ -15,7 +15,7 @@
       
     <div class="recipe-list-box">
       <div class="recipe-list-left-div">
-        <img src="{{ url_for('static', filename='images/')}}{{recipe.imgfullname}}"  alt="recipe_picture" />
+        <a href="{{ url_for('recipe', recipe_id=recipe._id) }}"><img class="imgsmall" src="{{ url_for('static', filename='images/')}}{{recipe.imgfullname}}"  alt="recipe_picture" /></a>
       </div>
 
       <div class="recipe-list-right">

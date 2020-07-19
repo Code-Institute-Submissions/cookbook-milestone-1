@@ -20,30 +20,42 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/search', methods=["POST"])
+def search():
+    if request.method == "POST":
+        data = request.form.to_dict()
+        keyword = str(data['mysearch'])
+        query={"ingredients": { "$regex": keyword }}
+    return render_template("search.html", recipes=mongo.db.recipes.find(query))
+
 @app.route('/pasta')
 def pasta():
-    return render_template("pasta.html")
+    query={"category_name": "Pasta"}
+    return render_template("pasta.html", recipes=mongo.db.recipes.find(query))
 
 
 @app.route('/meatandfish')
 def meatandfish():
-    return render_template("meatandfish.html")
+    query={"category_name": "Meat&Fish"}
+    return render_template("meatandfish.html", recipes=mongo.db.recipes.find(query))
 
 
 @app.route('/vegetarian')
 def vegetarian():
-    tot_doc = mongo.db.recipes.count()
-    return render_template("vegetarian.html", recipes=mongo.db.recipes.find(), documents=tot_doc)
+    query={"category_name": "Vegetarian"}
+    return render_template("vegetarian.html", recipes=mongo.db.recipes.find(query))
 
 
 @app.route('/dessert')
 def dessert():
-    return render_template("dessert.html")
+    query={"category_name": "Dessert"}
+    return render_template("dessert.html", recipes=mongo.db.recipes.find(query))
 
 
 @app.route('/baking')
 def baking():
-    return render_template("baking.html")
+    query={"category_name": "Baking"}
+    return render_template("baking.html", recipes=mongo.db.recipes.find(query))
 
 
 @app.route('/contact')
@@ -113,18 +125,18 @@ def update_recipe(recipe_id):
 
 
 
-@ app.route('/add')
+@app.route('/add')
 def add():
     return render_template("add.html", recipes=mongo.db.recipes.find())
 
 
-@ app.route('/sent')
+@app.route('/sent')
 def sent():
     return render_template("sent.html", recipes=mongo.db.recipes.find())
 
 
 
-@ app.route('/insert_recipe', methods=['POST'])
+@app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
 
     x=datetime.datetime.now()
@@ -162,16 +174,18 @@ def insert_recipe():
 
 
 
+if __name__ == "__main__":
+    app.run(debug=True)
+    
+    
+    
 
-
-
+"""
 if __name__ =="__main__":
     app.run(host=os.getenv("IP"),
        port=int(os.getenv("PORT")),
        debug=True)
+"""
 
 
-"""
-if __name__ == "__main__":
-    app.run(debug=True)
-"""
+
