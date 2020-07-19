@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="bg-color-white">
+
+  <section id="recipe-list-section"> <!-- SECTION MEAT & FISH CONTAINER START -->
+
+    <header id="intro-header">
+      <h1>Your recipes by Ingredient</h1>
+    </header>
+
+
+    {% for recipe in recipes %}
+
+    <div class="recipe-list-box">
+      <div class="recipe-list-left-div">
+        <a href="{{ url_for('recipe', recipe_id=recipe._id) }}"><img class="imgsmall" src="{{ url_for('static', filename='images/')}}{{recipe.imgfullname}}"  alt="recipe_picture" /></a>
+      </div>
+
+      <div class="recipe-list-right">
+        <p class="title-recipe">{{recipe.title}}</p>
+        <p class="recipe-description"> {{ recipe.method[:150] + "... " if recipe.method|length > 75 else recipe.method }}<a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="readmore">Read More</a></p>
+
+        <div class="date-and-star">
+          <div>
+            <p><small>{{recipe.posted}}</small></p>
+          </div>
+          <div class="rate-in-list">
+            <img src="/static/images/star.png" alt="Rate" />
+            <p><small>4,2</small></p>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- recipe-list-box END-->
+    {% endfor %}
+
+
+
+
+
+
+
+  </section> <!-- SECTION MEAT & FISH CONTAINER END -->
+
+</main>
+
+{% endblock %}
