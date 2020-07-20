@@ -25,7 +25,7 @@ def search():
     if request.method == "POST":
         data = request.form.to_dict()
         keyword = str(data['mysearch'])
-        query={"ingredients": { "$regex": keyword }}
+        query={"ingredients": { "$regex": keyword, "$options": "i" }}
     return render_template("search.html", recipes=mongo.db.recipes.find(query))
 
 @app.route('/pasta')
