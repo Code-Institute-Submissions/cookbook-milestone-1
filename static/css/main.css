@@ -23,8 +23,8 @@ p {
     color: #141414;
 }
 
-/* INDEX: MAIN PIC AT THE TOP ON THE INDEX */
 
+/* INDEX: MAIN PIC AT THE TOP */
 .main-pic {
     padding: 180px 0;
     background-image: url('/static/images/food.jpg');
@@ -38,8 +38,7 @@ p {
     margin-bottom: 70px;
 }
 
-/* INDEX: FRAME IN THE MIDDLE OF MAIN PIC */
-
+/* INDEX: FRAME IN THE MIDDLE OF THE MAIN PIC */
 #pic-square {
     display: none;
     margin: auto;
@@ -68,8 +67,7 @@ p {
 }
 
 
-/* INDEX: BUTTON INSIDE THE FRAME IN MANI PIC */
-
+/* INDEX: BUTTON INSIDE THE FRAME IN THE MAIN PIC */
 #gold-text {
     margin: auto;
     font-family: 'Didact Gothic', sans-serif;
@@ -82,7 +80,6 @@ p {
 
 
 /* INDEX MAIN CONTAINER - <section> */
-
 #index-container {
     width: auto;
     margin: 20px;
@@ -102,7 +99,6 @@ p {
 }
 
 /* INDEX: WEEKLY RECIPES IMAGES STYLE */
-
 #weekly-768px img {
     width: 100%;
     height: 250px;
@@ -110,7 +106,6 @@ p {
 }
 
 /* INDEX: MOST RATED RECIPES IMAGES STYLE */
-
 #most-rated img {
     width: 100%;
     height: 250px;
@@ -118,7 +113,6 @@ p {
 }
 
 /* INDEX: LATEST RECIPES IMAGES STYLE */
-
 .latest-recipes img {
     width: 100%;
     height: 250px;
@@ -133,8 +127,7 @@ p {
     margin-top: 50px;
 }
 
-/* INDEX: SEARCH BAR AVAILABLE AT THE TOP WHEN BREAKPOINT IS UNDER 1200 */
-
+/* INDEX: SEARCH BAR AVAILABLE AT THE TOP LEFT WHEN BREAKPOINT IS UNDER 1200 */
 #searchbar-sociallinks-1200px {
     display: none;
 }
@@ -149,7 +142,6 @@ p {
 }
 
 /* INDEX: SEARCH BAR AVAILABLE AT THE TOP RIGHT WHEN BREAKPOINT IS ABOVE 1200 */
-
 #search-form {
     display: flex;
     margin-top: 5px;
@@ -166,12 +158,12 @@ p {
     border: 1px solid #b9b9b9;
     border-style: solid none solid solid;
     border: 1px solid #b9b9b9;
-    height: 40px; /* added this to fix the issue */
+    height: 40px;
     outline: none;
 }
 
 #search-btn {
-    height: 40px; /* added this to fix the issue */
+    height: 40px;
     background: white;
     background-image: url('/static/images/magnifying-glass.png');
     background-repeat: no-repeat;
@@ -186,7 +178,6 @@ p {
 }
 
 /* INDEX: STREAMING EVENTS LIST STYLE */
-
 .event-name {
     font-size: 18px;
     font-weight: bolder;
@@ -211,7 +202,6 @@ p {
 }
 
 /* INDEX: ABOUT COOKBOOK P STYLE */
-
 #about p {
     font-size: 16px;
 }
@@ -242,7 +232,6 @@ p {
 
 
 /* MAIN DIV STYLE */
-
 .recipe-list-box {
     display: flex;
     padding: 0;
@@ -305,32 +294,6 @@ p {
     padding-right: 3px;
 }
 
-/* numbers to browse pages i.e. < 1 2 3 4 5 6 > */
-#page-listing {
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-    margin: auto;
-    font-weight: bolder;
-    margin-bottom: 30px;
-}
-
-.listingnum-1200-px {
-    display: none;
-}
-
-/* arrow to browse pages i.e. in < 1 2 3 4 5 6 > */
-.arrow-page {
-    text-align: center;
-    align-items: center;
-    color: #FFFFFF;
-    background-color: #f08e5e;
-    width: 20px;
-    height: 24px;
-    border: 2px solid #f08e5e;
-    border-radius: 45px;
-}
-
 .addnew-p {
     margin-left: 14px;
 }
@@ -340,7 +303,6 @@ p {
     font-size: 18px;
 }
 
-
 .addnew-p a:hover {
     color: #ee4b00;
     font-size: 19px;
@@ -348,21 +310,25 @@ p {
 }
 
 
-/* BREAKPOINT 768PX */
 
+
+/* BREAKPOINT 768PX */
 @media (min-width: 768px) {
     body {
         padding: 0 12px;
     }
+
     /* INDEX: MAIN PIC AT THE TOP ON THE INDEX */
     .main-pic {
         padding: 300px 0;
     }
+
     /* INDEX MAIN CONTAINER - <section> */
     #index-container {
         width: auto;
         margin: 20px;
     }
+
     /* INDEX: WEEKLY RECIPES IMAGES STYLE */
     #weekly-768px {
         margin: auto;
@@ -370,24 +336,29 @@ p {
         justify-content: space-between;
         width: 700px;
     }
+
     #weekly-768px img {
         width: 335px;
         height: 200px;
         object-fit: cover;
     }
+
     .weekly-p-768px {
         width: 335px;
     }
+
     #most-rated {
         margin: auto;
         width: 700px;
     }
+
     /* INDEX: MOST RATED RECIPES IMAGES STYLE */
     #most-rated img {
         width: 100%;
         height: 400px;
         object-fit: cover;
     }
+
     /* INDEX: LATEST RECIPES IMAGES STYLE */
     .latest-recipes {
         margin: auto;
@@ -395,6 +366,7 @@ p {
         justify-content: space-between;
         width: 700px;
     }
+
     .latest-recipes img {
         width: 335px;
         height: 200px;
@@ -407,7 +379,6 @@ p {
 }
 
 /* BREAKPOINT 992PX */
-
 @media (min-width: 992px) {
     #pic-square {
         display: block;
@@ -415,9 +386,8 @@ p {
 }
 
 /* BREAKPOINT 1200PX */
-
 @media (min-width: 1200px) {
-    /* INDEX: HIDE SEARCH BAR AS FIRST ELEMENT TO MOVE IT TO THE RIGHT SECTION */
+    /* INDEX: HIDE SEARCH BAR TO DISPLAY IT AT THE TOP RIGHT */
     #searchbar-576px {
         display: none;
     }
@@ -426,19 +396,21 @@ p {
         display: none;
     }
 
-
     #index-container {
         display: flex;
     }
+
     /* INDEX - LEFT CELL SIZE */
     #index-left {
         width: 65%;
     }
+
     /* INDEX - RIGHT CELL SIZE */
     #index-right {
         width: 25%;
         margin-left: 80px;
     }
+
     /* INDEX: MAKING THE SEARCH BAR AVAILABLE IN THE RIGHT CELL */
     #searchbar-sociallinks-1200px {
         display: block;
@@ -452,13 +424,12 @@ p {
     .follow-us {
         width: 300px;
     }
+
     .follow-us img {
         margin: 5px;
         width: 25px;
         height: 25px;
     }
-
-
     
     /* RECIPE LIST PAGES */
     #recipe-list-section {

@@ -4,10 +4,6 @@
 <main class="bg-color-white">
 
     <section id="section-recipe">
-        <!-- SECTION MEAT & FISH CONTAINER START -->
-
-
-
         <div>
             <div id="recipe-cont-head">
                 <div>
@@ -16,15 +12,13 @@
                         <a href="{{ url_for('add') }}">ADD RECIPE </a>
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">EDIT</a>
                         <a href="javascript:del()">DELETE</a>
-                      <!--  <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}">DELETE</a> -->
                     </div>
-                    <p>Author: <span id="userrecipe">Renato</span></p>  <!-- I added author ID in MongoDB, but since this blog is an example, I will use my name in HTML -->
+                    <p>Author: <span id="userrecipe">Renato</span></p>
                     <p>Category: {{recipe.category_name}}</p>
                     <p>Prep time: {{recipe.ptime}}</p>
                     <p>Cooking time: {{recipe.ctime}}</p>
                     <p>Serves: {{recipe.serves}}</p>
                     <p>Skill level: {{recipe.slevel}}</p>
-                    
                     <p>Submitted: {{recipe.posted}}</p>
                       
                     <div class="rating-share">
@@ -43,6 +37,7 @@
                             <img src="/static/images/twitter.png" alt="Twitter">
                         </div>
                     </div>
+
                 </div>
                 <div>
                     <img id="headimage" src="{{ url_for('static', filename='images/')}}{{recipe.imgfullname}}"  alt="recipe_picture" />
@@ -51,7 +46,6 @@
             <div id="recipe-cont-body">
                 <div>
                     <h1>Ingredients:</h1>
-
                     {% set lines = recipe.ingredients.splitlines() %}
                     {% set mylist = lines|length %}
                     {% for i in range(mylist) %}
@@ -78,8 +72,9 @@
                 </div>
             </div>
 
+             <!-- YOU MAY ALSO LIKE SECTION -->
             <h1>You may also like</h1>
-            <div class="mayalsolike"> <!-- you may also like -->
+            <div class="mayalsolike">
 
                 <div class="mayalsolike-singlecell">
                     <a href="{{ url_for('recipe', recipe_id='5f10987c440eaa4c3222205c') }}"><img src="/static/images/5f10987c440eaa4c3222205c.jpg" alt="recipe-image" /></a>
@@ -152,13 +147,10 @@
                         <span class="fa fa-star"></span>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
 
-    </section> <!-- SECTION MEAT & FISH CONTAINER END -->
+    </section>
 
 </main>
 

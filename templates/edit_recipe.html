@@ -12,7 +12,6 @@
     <div class="container">
 
       <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" enctype="multipart/form-data">
-
         <div id="picarea">
           <img id="output" src="/static/images/{{recipe.imgfullname}}" alt="upload-picture" />
           <label class="button-pic" for="input-id">Select a file</label>
@@ -23,7 +22,6 @@
         <br /><br /><br />
         <label for="title">Title</label>
         <input type="text" id="title" name="title" value="{{recipe.title}}">
-        <!-- for tutti, se finche' e' diverso non mettere selected altrimenti metti selected -->
 
         <select id="category" name="category_name">
           <option value="Pasta" {{ 'selected' if recipe.category_name == 'Pasta' else '' }}>Pasta</option>
@@ -54,7 +52,6 @@
         <div class="btn-cont">
           <input type="submit" value="Submit">
         </div>
-
       </form>
 
     </div>
@@ -62,8 +59,5 @@
   </section>
 
 </main>
-
-
-
 
 {% endblock %}

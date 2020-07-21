@@ -30,7 +30,6 @@ ol li {
     color: #ffffff;
 }
 
-
 #recipe-cont-head img {
     width: 100%;
     height: 340px;
@@ -46,7 +45,6 @@ ol li {
     margin: 0 10px 10px;
 }
 
-
 #recipe-cont-body p {
     margin: 0 10px;
     padding: 10px;
@@ -57,7 +55,6 @@ ol li {
     color: #141414;
 }
 
-
 .color1 {
     background-color: #fcf6f3;
 }
@@ -65,7 +62,6 @@ ol li {
 .color2 {
     background: #FFFFFF;
 }
-
 
 #userrecipe {
     font-family: 'Cabin', sans-serif;
@@ -82,12 +78,10 @@ ol li {
     margin: 10px 0px;
 }
 
-
 /* Font Awesome Icon Library */
 .checked {
   color: orange;
 }
-
 
 .rating-share img {
     width: 25px !important;
@@ -96,18 +90,15 @@ ol li {
     padding: 0 !important;
 }
 
-
 .mayalsolike {
     display: block;
     margin: 40px 30px 70px;
 }
 
-
 .mayalsolike-singlecell {
     width: 280px;
     margin: 20px auto 60px;    
 }
-
 
 .mayalsolike img {
     width: 280px;
@@ -115,10 +106,11 @@ ol li {
     object-fit: cover;
 }
 
-
 .mayalsolike-title {
     font-size: 18px;
 }
+
+
 
 @media (min-width: 576px) {
     .mayalsolike {
@@ -127,14 +119,9 @@ ol li {
     }
 }
 
-@media (min-width: 768px) {
-
-
- }
 
 
 @media (min-width: 992px) {
-
     #recipe-cont-head {
         margin: 10px 0;
         padding: 0 30px;
@@ -143,24 +130,19 @@ ol li {
         box-shadow: 1px 4px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
-
-
     #recipe-cont-head > div {
         padding: 0 20px;
         width: 40%;
     }
 
-
     #recipe-cont-head img {
         width: 100%;
     }
 
-
-
-
     #pic-square {
         display: block;
     }
+
     .rating-share {
         display: flex;
     }
@@ -169,7 +151,6 @@ ol li {
 
 
 @media (min-width: 1200px) {
-
     .mayalsolike {
         width: 1200px;
     }
@@ -178,7 +159,6 @@ ol li {
         width: 320px;
         margin: 20px;
     }
-    
     
     .mayalsolike img {
         width: 280px;

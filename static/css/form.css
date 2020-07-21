@@ -56,8 +56,7 @@ input[type=text], select, textarea {
     color: transparent;
     text-shadow: 0 0 0 #000;
   }
-/* End of codepen code */
-
+  /* End of codepen code */
 
 
   input[type=email] {
@@ -71,7 +70,6 @@ input[type=text], select, textarea {
     resize: vertical;
     outline: none;
   }
-
   
   input[type=submit] {
     background-color: #f08e5e;;
@@ -115,7 +113,6 @@ input[type=text], select, textarea {
   padding: 20px;
   text-align: center;
   margin: auto;
-
 }
 
 #picarea img {
@@ -124,7 +121,6 @@ input[type=text], select, textarea {
   margin: 0 auto 30px;
   object-fit: cover;
 }
-
 
 .button-pic {
   background-color: #f08e5e;;
@@ -148,7 +144,6 @@ input[type=text], select, textarea {
 /*** *** *** END PHOTO AREA *** *** ***/
 
 
-
 #confirmation {
   text-align: center;
   margin: 150px 40px 400px;
@@ -156,20 +151,15 @@ input[type=text], select, textarea {
 }
 
 
-  @media (min-width: 768px) {
+
+@media (min-width: 768px) {
     .container {
         width: 700px;
-      }
     }
-
-
-
+}
 
 @media (min-width: 1200px) {
     .container {
         margin: 0 120px;
     }
 }
-
-
-

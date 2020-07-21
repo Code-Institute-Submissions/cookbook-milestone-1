@@ -3,15 +3,12 @@
 
 <main class="bg-color-white">
 
-  <section id="recipe-list-section"> <!-- SECTION MEAT & FISH CONTAINER START -->
-
+  <section id="recipe-list-section">
     <header id="intro-header">
       <h1>Your recipes by Ingredient</h1>
     </header>
 
-
     {% for recipe in recipes %}
-
     <div class="recipe-list-box">
       <div class="recipe-list-left-div">
         <a href="{{ url_for('recipe', recipe_id=recipe._id) }}"><img class="imgsmall" src="{{ url_for('static', filename='images/')}}{{recipe.imgfullname}}"  alt="recipe_picture" /></a>
@@ -31,17 +28,10 @@
           </div>
         </div>
       </div>
-
-    </div> <!-- recipe-list-box END-->
+    </div>
     {% endfor %}
 
-
-
-
-
-
-
-  </section> <!-- SECTION MEAT & FISH CONTAINER END -->
+  </section>
 
 </main>
 
