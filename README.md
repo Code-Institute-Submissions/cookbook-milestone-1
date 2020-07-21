@@ -53,16 +53,16 @@ I hope you like this small project, ciao!
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [JavaScript] (https://en.wikipedia.org/wiki/JavaScript)
--   [Python] (https://en.wikipedia.org/wiki/Python_(programming_language))
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks, Libraries & Programs Used
--   [MongoDB] (https://www.mongodb.com/)
--   [Flask] (https://palletsprojects.com/p/flask/)
--   [EmailJS] (https://www.emailjs.com/)
+-   [MongoDB](https://www.mongodb.com/)
+-   [Flask](https://palletsprojects.com/p/flask/)
+-   [EmailJS](https://www.emailjs.com/)
 
-1. [Heroku] (https://www.heroku.com/)
-    - Heroku was used to deploy the [website] (https://cookbook-milestone.herokuapp.com). 
+1. [Heroku](https://www.heroku.com/)
+    - Heroku was used to deploy the [website](https://cookbook-milestone.herokuapp.com). 
 2. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 3. [GitHub:](https://github.com/)
@@ -102,9 +102,9 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### GitHub Pages, Heroku and Visual Studio Code
 
--   The [project] (https://cookbook-milestone.herokuapp.com) was deployed to GitHub Pages linked to [Heroku] (www.heroku.com).
--   Heroku manages app deployments with [Git] (https://git-scm.com/), the popular version control system.
--   To code this project I used a code editor on my computer, [Visual Studio Code] (https://www.visualstudio.com/)for [macOS] (https://en.wikipedia.org/wiki/MacOS)  
+-   The [project](https://cookbook-milestone.herokuapp.com) was deployed to GitHub Pages linked to [Heroku](www.heroku.com).
+-   Heroku manages app deployments with [Git](https://git-scm.com/), the popular version control system.
+-   To code this project I used a code editor on my computer, [Visual Studio Code](https://www.visualstudio.com/)for [macOS](https://en.wikipedia.org/wiki/MacOS)  
 
 ### Forking the GitHub Repository
 
@@ -149,20 +149,20 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Content
 
 - Text intro into the category pages:
-    - Text intro in pasta.html found on [delish.com] (https://www.delish.com/cooking/recipe-ideas/g3176/weeknight-pasta-dinners/)
-    - Text intro in meatandfish.html taken from allrecipes.com [1] (https://www.allrecipes.com/recipes/411/seafood/fish/) [2] (http://allrecipes.co.uk/recipes/beef-recipes.aspx?page=2)
-    - Text intro in vegetarian.html taken from [bbcgoodfood.com] (https://www.bbcgoodfood.com/recipes/category/vegetarian)
-    - Text intro in dessert.html taken from [bonappetit.com] (https://www.bonappetit.com/recipes/desserts/slideshow/easy-dessert-recipes)
-    - Text intro in baking.html taken from [www.bbcgoodfood.com] (https://www.bbcgoodfood.com/recipes/collection/easy-baking)
-- All the recipes were taken from [bbcgoodfood.com] (https://www.bbcgoodfood.com/)
+    - Text intro in pasta.html found on [delish.com](https://www.delish.com/cooking/recipe-ideas/g3176/weeknight-pasta-dinners/)
+    - Text intro in meatandfish.html taken from allrecipes.com [1](https://www.allrecipes.com/recipes/411/seafood/fish/) [2](http://allrecipes.co.uk/recipes/beef-recipes.aspx?page=2)
+    - Text intro in vegetarian.html taken from [bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/category/vegetarian)
+    - Text intro in dessert.html taken from [bonappetit.com](https://www.bonappetit.com/recipes/desserts/slideshow/easy-dessert-recipes)
+    - Text intro in baking.html taken from [www.bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/easy-baking)
+- All the recipes were taken from [bbcgoodfood.com](https://www.bbcgoodfood.com/)
 - README.md used is a [Code Institute](https://codeinstitute.net/) sample and was found [here](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md)
 
 ### Media
 
 - [Wix.com:](https://www.wix.com/logo/maker) was used to create the logo.
-- [Flaticon.com] (https://www.flaticon.com/categories/social-media) was used to find the Social Network icons
-- [Shareicon.net] (https://www.shareicon.net/data/512x512/2015/09/26/107434_youtube_512x512.png) was used to find the Streaming icon
-- Background image was taken at this [link] (http://churchofirelandhist.org/wp-content/uploads/2014/04/Silver-scale-White-Seamless-Texture-For-Website-Background.jpg)
+- [Flaticon.com](https://www.flaticon.com/categories/social-media) was used to find the Social Network icons
+- [Shareicon.net](https://www.shareicon.net/data/512x512/2015/09/26/107434_youtube_512x512.png) was used to find the Streaming icon
+- Background image was taken at this [link](http://churchofirelandhist.org/wp-content/uploads/2014/04/Silver-scale-White-Seamless-Texture-For-Website-Background.jpg)
 - The picture of the loaf in the index.html, that is my picture :-) taken with a Nikon D5600, and yes I also made the loaf with my sourdough :-)
 
 ### Acknowledgements
